@@ -1,0 +1,1510 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     66793,       1502]
+NotebookOptionsPosition[     45089,       1052]
+NotebookOutlinePosition[     65410,       1460]
+CellTagsIndexPosition[     65367,       1457]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\:0386\[Sigma]\[Kappa]\[Eta]\[Sigma]\[Eta] 7.5.1-1", "ChapterNC",
+ CellChangeTimes->{
+  3.6407012833362303`*^9, {3.6666779721665993`*^9, 3.666678010379394*^9}, {
+   3.6679978084116855`*^9, 3.6679978107155933`*^9}, 3.667999075366496*^9}],
+
+Cell["\[CapitalNu]\[Alpha] \[CurlyEpsilon]\[Kappa]\[Tau]\[Iota]\[Mu]\[Eta]\
+\[Theta]\[CurlyEpsilon]\:03af \[Eta] \[Tau]\[Iota]\[Mu]\:03ae \
+\[Tau]\[Omicron]\[Upsilon] \[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\
+\[Eta]\[Rho]\:03ce\[Mu]\[Alpha]\[Tau]\[Omicron]\[FinalSigma]", "Text",
+ CellChangeTimes->{{3.6679978166914086`*^9, 3.667997823132064*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"V", "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Integral]", "R"], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{"x", "+", "y"}], ")"}], "2"], 
+       RowBox[{"\[DifferentialD]", "x"}], 
+       RowBox[{"\[DifferentialD]", "y"}]}]}], "=", "21"}]}], 
+   TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"R", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", ",", "y"}], ")"}], "/", "1"}], "\[LessEqual]", 
+       RowBox[{"x", "+", "y"}], "\[LessEqual]", "4"}], ",", 
+      RowBox[{
+       RowBox[{"-", "2"}], "\[LessEqual]", 
+       RowBox[{"x", "-", 
+        RowBox[{"2", "y"}]}], "\[LessEqual]", "1"}]}], "}"}]}], 
+   TraditionalForm]]]
+}], "Equation",
+ CellChangeTimes->{{3.667997826158281*^9, 3.667997876203845*^9}, {
+  3.6679985642444305`*^9, 3.6679985990916653`*^9}, {3.66799888422731*^9, 
+  3.66799888422731*^9}, {3.667999228676385*^9, 3.6679992306830187`*^9}}],
+
+Cell["\[CapitalLambda]\:03cd\[Sigma]\[Eta]", "Equation",
+ CellChangeTimes->{{3.667998951011586*^9, 3.6679989518511257`*^9}}],
+
+Cell[TextData[{
+ "\[CapitalGamma]\[Iota]\[Alpha] \[Tau]\[Omicron]\[Nu] \[Upsilon]\[Pi]\
+\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\:03cc \[Tau]\
+\[Omicron]\[Upsilon] \[Pi]\[Alpha]\[Rho]\[Alpha]\[Pi]\:03ac\[Nu]\[Omega] \
+\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\:03ce\[Mu]\[Alpha]\
+\[Tau]\[Omicron]\[FinalSigma] \[Mu]\[CurlyEpsilon] \[Tau]\[Eta] \[Mu]\:03ad\
+\[Theta]\[Omicron]\[Delta]\[Omicron] M.C. \[Theta]\[CurlyEpsilon]\[Omega]\
+\[Rho]\[Omicron]\:03cd\[Mu]\[CurlyEpsilon] \:03cc\[Tau]\[Iota] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"g", "(", 
+     RowBox[{"x", ",", "y"}], ")"}], "=", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"x", "+", "y"}], ")"}], "2"]}], TraditionalForm]]],
+ " \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \[Eta] \[Sigma]\[Upsilon]\[Nu]\
+\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta] \[Pi]\[Omicron]\[Upsilon] \[Theta]\
+\:03ad\[Lambda]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon] \[Nu]\[Alpha] \
+\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\:03ce\[Sigma]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon], \[CurlyEpsilon]\[Nu]\:03ce \[Eta] \
+\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta] \
+\[Kappa]\[Alpha]\[Tau]\[Alpha]\[Nu]\[Omicron]\[Mu]\:03ae\[FinalSigma] \
+\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \[Eta] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", 
+     RowBox[{"x", ",", "y"}], ")"}], "=", "1"}], TraditionalForm]]],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.6682248225699854`*^9, 3.668224881229355*^9}, {
+  3.668362700158047*^9, 3.6683627056599674`*^9}, {3.6683675910876856`*^9, 
+  3.6683675952487264`*^9}}],
+
+Cell[TextData[{
+ StyleBox["\[CapitalUpsilon]\[Pi]\:03cc\[Delta]\[CurlyEpsilon]\[Iota]\[Xi]\
+\[Eta]",
+  FontWeight->"Bold"],
+ ": \[CapitalOmicron] \[Tau]\:03cc\[Pi]\[Omicron]\[FinalSigma] R \
+\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \[Tau]\[Omicron] \
+\[Pi]\[Alpha]\[Rho]\[Alpha]\[Lambda]\[Lambda]\[Eta]\[Lambda]\:03cc\[Gamma]\
+\[Rho]\[Alpha]\[Mu]\[Mu]\[Omicron] \[Pi]\[Omicron]\[Upsilon] \[Omicron]\[Rho]\
+\:03af\[Zeta]\[CurlyEpsilon]\[Tau]\[Alpha]\[Iota] \[Alpha]\[Pi]\:03cc \[Tau]\
+\[Iota]\[FinalSigma] \[CurlyEpsilon]\[Upsilon]\[Theta]\[CurlyEpsilon]\:03af\
+\[FinalSigma] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "+", "y"}], "=", "1"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "+", "y"}], "=", "4"}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "-", 
+     RowBox[{"2", "y"}]}], "=", 
+    RowBox[{"-", "2"}]}], TraditionalForm]]],
+ ", ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"x", "-", 
+     RowBox[{"2", "y"}]}], "=", "1"}], TraditionalForm]]],
+ ". \[CapitalEpsilon]\[Pi]\[CurlyEpsilon]\[Iota]\[Delta]\:03ae ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "\[Element]", 
+    RowBox[{"[", 
+     RowBox[{"0", ",", "4"}], "]"}]}], TraditionalForm]]],
+ " \[Kappa]\[Alpha]\[Iota] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "\[Element]", 
+    RowBox[{"[", 
+     RowBox[{"0", ",", "2"}], "]"}]}], TraditionalForm]]],
+ ", \[Mu]\[CurlyEpsilon] \[Tau]\[Omicron]\[Upsilon]\[FinalSigma] \[Mu]\
+\[CurlyEpsilon]\[Tau]\[Alpha]\[Sigma]\[Chi]\[Eta]\[Mu]\[Alpha]\[Tau]\[Iota]\
+\[Sigma]\[Mu]\[Omicron]\:03cd\[FinalSigma] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", 
+    RowBox[{"4", 
+     SubscriptBox["\[Xi]", "1"]}]}], TraditionalForm]]],
+ " \[Kappa]\[Alpha]\[Iota] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"y", "=", 
+    RowBox[{"4", 
+     SubscriptBox["\[Xi]", "2"]}]}], TraditionalForm]]],
+ " (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Xi]", "1"], "\[Element]", 
+     RowBox[{"[", 
+      RowBox[{"0", ",", "1"}], "]"}]}], ",", 
+    RowBox[{
+     SubscriptBox["\[Xi]", "2"], "\[Element]", 
+     RowBox[{"[", 
+      RowBox[{"0", ",", "1"}], "]"}]}]}], TraditionalForm]]],
+ ") \[Tau]\[Omicron] \[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\:03ae\
+\[Rho]\[Omega]\[Mu]\[Alpha] \[Gamma]\[Rho]\:03ac\[CurlyPhi]\[CurlyEpsilon]\
+\[Tau]\[Alpha]\[Iota]"
+}], "Text",
+ CellChangeTimes->{{3.668417881099461*^9, 3.6684178829531603`*^9}, {
+  3.6684179223907146`*^9, 3.668418025861757*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"V", "=", 
+   RowBox[{
+    SubscriptBox["\[Integral]", 
+     RowBox[{"R", "'"}]], 
+    RowBox[{"8", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"4", 
+        SubscriptBox["\[Xi]", "1"]}], "+", 
+       RowBox[{"2", 
+        SubscriptBox["\[Xi]", "2"]}]}], ")"}], 
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["\[Xi]", "1"]}], 
+     RowBox[{"\[DifferentialD]", 
+      SubscriptBox["\[Xi]", "2"]}]}]}]}], TraditionalForm]]]], "Equation",
+ CellChangeTimes->{{3.668418028531731*^9, 3.668418074428276*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\[Omega]\[Tau]\
+\:03ad\[Alpha]", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "[", 
+     RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+    RowBox[{"8", 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"4", "xi1"}], "+", 
+        RowBox[{"2", "xi2"}]}], ")"}], "2"]}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Theta]\:03ad\[Tau]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+     "\[Tau]\[Alpha]", " ", "\:03cc\[Rho]\[Iota]\[Alpha]", " ", 
+     "\[Tau]\[Omega]\[Nu]", " ", "x"}], ",", " ", "y"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"xi1min", "=", "0"}], ";", 
+   RowBox[{"xi1max", "=", "1"}], ";", 
+   RowBox[{"xi2min", "=", "0"}], ";", 
+   RowBox[{"xi2max", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", "\[Tau]\[Omega]\[Nu]", 
+    " ", "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omega]\[Nu]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Npoints", "=", "10000"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Alpha]\[Rho]\[Chi]\[Iota]\[Kappa]\:03ad\[FinalSigma]", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ad\[FinalSigma]", " ", 
+    "\[Mu]\[CurlyEpsilon]\[Gamma]\[CurlyEpsilon]\[Theta]\:03ce\[Nu]", " ", 
+    "\[Pi]\[Omicron]\[Upsilon]", " ", "\[Theta]\[Alpha]", " ", 
+    "\[Chi]\[Rho]\[CurlyEpsilon]\[Iota]\[Alpha]\[Sigma]\[Tau]\[Omicron]\:03cd\
+\[Nu]", " ", "\[Sigma]\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\:03cc"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sum2", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+     "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Sigma]\[CurlyEpsilon]", " ", 
+     "\[Mu]\:03af\[Alpha]", " ", 
+     "\[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\:03ac\[Lambda]\[Eta]\[Psi]\[Eta]"}], 
+    ",", " ", 
+    RowBox[{
+    "\:03ad\[Tau]\[Sigma]\[Iota]", " ", "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]",
+      " ", "\[Nu]\[Alpha]", " ", "\[Mu]\[Eta]\[Nu]", " ", 
+     "\[Upsilon]\[Pi]\:03ac\[Rho]\[Chi]\[CurlyEpsilon]\[Iota]", " ", 
+     "\[Theta]\:03ad\[Mu]\[Alpha]", " ", "\[Alpha]\[Nu]", " ", 
+     "\[Zeta]\[Eta]\[Tau]\:03ae\[Sigma]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Pi]\[Omicron]\[Lambda]\:03cd", " ", 
+     "\[Mu]\[CurlyEpsilon]\[Gamma]\:03ac\[Lambda]\[Omega]", " ", 
+     "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", 
+     "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\[Iota]\[Omega]\[Nu]"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "Npoints"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"xi1", "=", 
+      RowBox[{"RandomReal", "[", 
+       RowBox[{"{", 
+        RowBox[{"xi1min", ",", "xi1max"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"xi2", "=", 
+      RowBox[{"RandomReal", "[", 
+       RowBox[{"{", 
+        RowBox[{"xi2min", ",", "xi2max"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"And", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"4", "xi1"}], "+", 
+           RowBox[{"2", "xi2"}]}], "\[GreaterEqual]", "1"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"4", "xi1"}], "+", 
+           RowBox[{"2", "xi2"}]}], "\[LessEqual]", "4"}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"4", "xi1"}], "-", 
+           RowBox[{"4", "xi2"}]}], "\[GreaterEqual]", 
+          RowBox[{"-", "2"}]}], ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"4", "xi1"}], "-", 
+           RowBox[{"4", "xi2"}]}], "\[LessEqual]", "1"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"gi", "=", 
+         RowBox[{"g", "[", 
+          RowBox[{"xi1", ",", "xi2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"sum", "=", 
+         RowBox[{"sum", "+", "gi"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"sum2", "=", 
+         RowBox[{"sum2", "+", 
+          SuperscriptBox["gi", "2"]}]}], ";"}]}], "\[IndentingNewLine]", 
+      "]"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Tau]\[CurlyEpsilon]\[Lambda]\[Iota]\[Kappa]\:03ae", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+    "\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\:03ce\[Mu]\
+\[Alpha]\[Tau]\[Omicron]\[FinalSigma]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"estimation", "=", 
+   FractionBox["sum", "Npoints"]}], ";", 
+  RowBox[{"var", "=", 
+   RowBox[{
+    FractionBox["1", "Npoints"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "Npoints"], "sum2"}], "-", 
+      SuperscriptBox["estimation", "2"]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\!\(\*SubscriptBox[\(\[Integral]\), \
+\(R\)]\)(x+y\!\(\*SuperscriptBox[\()\), \(2\)]\)\[DifferentialD]x\
+\[DifferentialD]y \[TildeEqual] ``\[PlusMinus] ``\>\"", ",", "estimation", 
+   ",", "var"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  "\"\<\[CapitalEta] \[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\
+\[Kappa]\:03ae \[Tau]\[Iota]\[Mu]\[Eta] \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\
+\[Pi]\[Tau]\[CurlyEpsilon]\[Iota] 21.\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.6682244639058237`*^9, 3.6682244808805647`*^9}, {
+   3.6682246859423213`*^9, 3.6682247589225597`*^9}, {3.668224839456156*^9, 
+   3.668224839572037*^9}, {3.6682249565544167`*^9, 3.668225101221861*^9}, {
+   3.6682252081753263`*^9, 3.668225310237194*^9}, {3.668225402446898*^9, 
+   3.668225483372571*^9}, {3.6682255299857597`*^9, 3.668225531869869*^9}, {
+   3.668225714212432*^9, 3.668225816677905*^9}, {3.6682258671406507`*^9, 
+   3.6682258868748355`*^9}, {3.668361785600407*^9, 3.668361813929085*^9}, {
+   3.668361859550539*^9, 3.668361877524001*^9}, {3.66836193108753*^9, 
+   3.6683620071168613`*^9}, {3.6683620790111427`*^9, 3.668362755121368*^9}, {
+   3.6683635965259624`*^9, 3.6683636258510118`*^9}, {3.6683636563067894`*^9, 
+   3.668363765213892*^9}, {3.6683638435941224`*^9, 3.6683638896217117`*^9}, {
+   3.6683639549680595`*^9, 3.6683640086237416`*^9}, {3.6683642407262416`*^9, 
+   3.6683642539536753`*^9}, {3.668364288055046*^9, 3.668364301218891*^9}, {
+   3.668366824021905*^9, 3.668366907077319*^9}, {3.6683669914103003`*^9, 
+   3.668367010484019*^9}, {3.668367563148945*^9, 3.6683675768620343`*^9}, {
+   3.668367650239045*^9, 3.6683676922677*^9}, {3.668399665353939*^9, 
+   3.668399686576432*^9}, {3.668399774958691*^9, 3.668399799326955*^9}, {
+   3.6683998643241005`*^9, 3.6683999505116367`*^9}, {3.6684003402504673`*^9, 
+   3.668400359893094*^9}, 3.6684004582005825`*^9, {3.6684032644200125`*^9, 
+   3.668403287941989*^9}, {3.668403814590456*^9, 3.6684038610657907`*^9}, {
+   3.6684136424680767`*^9, 3.668413665940544*^9}}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Integral]\\), \
+\\(R\\)]\\)(x+y\\!\\(\\*SuperscriptBox[\\()\\), \\(2\\)]\\)\[DifferentialD]x\
+\[DifferentialD]y \[TildeEqual] \
+\\!\\(\\*RowBox[{\\\"20.783225251057022`\\\"}]\\)\[PlusMinus] \
+\\!\\(\\*RowBox[{\\\"0.11868103353120942`\\\"}]\\)\"\>",
+  StringForm[
+  "\!\(\*SubscriptBox[\(\[Integral]\), \
+\(R\)]\)(x+y\!\(\*SuperscriptBox[\()\), \(2\)]\)\[DifferentialD]x\
+\[DifferentialD]y \[TildeEqual] ``\[PlusMinus] ``", 20.783225251057022`, 
+   0.11868103353120942`],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.668399895454129*^9, 3.6683999545920286`*^9}, {
+   3.66840036162088*^9, 3.668400363529437*^9}, {3.66840045913214*^9, 
+   3.668400469886885*^9}, {3.66840050931403*^9, 3.6684005185929947`*^9}, 
+   3.6684005577650814`*^9, 3.668403820406884*^9, {3.6684038621186237`*^9, 
+   3.6684038769966526`*^9}, {3.6684136440507164`*^9, 3.6684136666843786`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\[CapitalEta] \
+\[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\
+\[Iota]\[Mu]\[Eta] \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\[Pi]\[Tau]\
+\[CurlyEpsilon]\[Iota] 21.\"\>",
+  StringForm[
+  "\[CapitalEta] \
+\[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\
+\[Iota]\[Mu]\[Eta] \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\[Pi]\[Tau]\
+\[CurlyEpsilon]\[Iota] 21."],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.668399895454129*^9, 3.6683999545920286`*^9}, {
+   3.66840036162088*^9, 3.668400363529437*^9}, {3.66840045913214*^9, 
+   3.668400469886885*^9}, {3.66840050931403*^9, 3.6684005185929947`*^9}, 
+   3.6684005577650814`*^9, 3.668403820406884*^9, {3.6684038621186237`*^9, 
+   3.6684038769966526`*^9}, {3.6684136440507164`*^9, 3.668413666689382*^9}}]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0386\[Sigma]\[Kappa]\[Eta]\[Sigma]\[Eta] 7.5.1-2", "ChapterNC",
+ CellChangeTimes->{
+  3.6407012833362303`*^9, {3.667999065690297*^9, 3.667999080523056*^9}}],
+
+Cell["\[CapitalNu]\[Alpha] \[CurlyEpsilon]\[Kappa]\[Tau]\[Iota]\[Mu]\[Eta]\
+\[Theta]\[CurlyEpsilon]\:03af \[Eta] \[Tau]\[Iota]\[Mu]\:03ae \
+\[Tau]\[Omicron]\[Upsilon] \[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\
+\[Eta]\[Rho]\:03ce\[Mu]\[Alpha]\[Tau]\[Omicron]\[FinalSigma]", "Text",
+ CellChangeTimes->{{3.667999188523573*^9, 3.6679991972317963`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"V", "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["\[Integral]", "R"], 
+      RowBox[{"x", " ", "y", " ", "z", 
+       RowBox[{"\[DifferentialD]", "x"}], 
+       RowBox[{"\[DifferentialD]", "y"}], 
+       RowBox[{"\[DifferentialD]", "z"}]}]}], "=", 
+     FractionBox["13", "240"]}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"R", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", ",", "y", ",", "z"}], "}"}], "/", "0"}], "\[LessEqual]",
+        "x", "\[LessEqual]", "1"}], ",", 
+      RowBox[{"0", "\[LessEqual]", "y", "\[LessEqual]", 
+       RowBox[{"1", "-", "x"}]}], ",", 
+      RowBox[{"0", "<", "z", "\[LessEqual]", 
+       RowBox[{"2", "-", "x"}]}]}], "}"}]}], TraditionalForm]]]
+}], "Equation",
+ CellChangeTimes->{{3.667999202694042*^9, 3.6679992236679907`*^9}, {
+  3.667999310570441*^9, 3.6679993421160536`*^9}}],
+
+Cell["\[CapitalLambda]\:03cd\[Sigma]\[Eta]", "Equation",
+ CellChangeTimes->{{3.667998951011586*^9, 3.6679989518511257`*^9}}],
+
+Cell[TextData[{
+ "\[CapitalEpsilon]\[Kappa]\[Tau]\[CurlyEpsilon]\[Lambda]\[Omicron]\:03cd\[Mu]\
+\[CurlyEpsilon] \[Tau]\[Omicron]\[Nu] \[Mu]\[CurlyEpsilon]\[Tau]\[Alpha]\
+\[Sigma]\[Chi]\[Eta]\[Mu]\[Alpha]\[Tau]\[Iota]\[Sigma]\[Mu]\:03cc ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"x", "=", 
+    RowBox[{"2", "\[Xi]"}]}], TraditionalForm]]],
+ " \[Gamma]\[Iota]\[Alpha] \[Nu]\[Alpha] \[Pi]\[Alpha]\:03af\[Rho]\[Nu]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon] \[Tau]\[Upsilon]\[Chi]\[Alpha]\:03af\
+\[Alpha] \[Xi] \[Sigma]\[Tau]\[Omicron] \[Delta]\[Iota]\:03ac\[Sigma]\[Tau]\
+\[Eta]\[Mu]\[Alpha] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]]],
+ ". \[CapitalEpsilon]\[Pi]\[Omicron]\[Mu]\:03ad\[Nu]\[Omega]\[FinalSigma]:"
+}], "Text",
+ CellChangeTimes->{{3.6684017977447357`*^9, 3.668401809338037*^9}, {
+  3.6684019881817102`*^9, 3.66840201739631*^9}, {3.668402335129029*^9, 
+  3.6684023472703347`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"0", "\[LessEqual]", "z", "\[LessEqual]", 
+    RowBox[{"2", "-", "x"}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Implies]", " ", 
+    RowBox[{"0", "\[LessEqual]", "\[Xi]", "\[LessEqual]", 
+     RowBox[{"1", "-", 
+      FractionBox["x", "2"]}]}]}], TraditionalForm]]]
+}], "Equation",
+ CellChangeTimes->{{3.6684020195152054`*^9, 3.6684020395706787`*^9}, {
+  3.6684021183875213`*^9, 3.6684021261748877`*^9}, {3.6684022987610717`*^9, 
+  3.6684023307843723`*^9}}],
+
+Cell["\[CapitalEpsilon]\[Nu]\:03ce \[Tau]\[Omicron] \[Omicron]\[Lambda]\
+\[Omicron]\[Kappa]\[Lambda]\:03ae\[Rho]\[Omega]\[Mu]\[Alpha] \[Mu]\
+\[CurlyEpsilon]\[Tau]\[Alpha]\[Sigma]\[Chi]\[Eta]\[Mu]\[Alpha]\[Tau]\:03af\
+\[Zeta]\[CurlyEpsilon]\[Tau]\[Alpha]\[Iota]:", "ItemParagraph",
+ CellChangeTimes->{{3.6684021339143124`*^9, 3.6684021479799623`*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[GridBox[{
+    {"V", "=", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "R"], 
+      RowBox[{"x", " ", "y", " ", "z", 
+       RowBox[{"\[DifferentialD]", "x"}], 
+       RowBox[{"\[DifferentialD]", "y"}], 
+       RowBox[{"\[DifferentialD]", "z"}]}]}]},
+    {" ", "=", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "R"], 
+      RowBox[{"x", " ", "y", " ", "2", "\[Xi]", 
+       RowBox[{"\[DifferentialD]", "x"}], 
+       RowBox[{"\[DifferentialD]", "y"}], 
+       RowBox[{"\[DifferentialD]", 
+        RowBox[{"(", 
+         RowBox[{"2", "\[Xi]"}], ")"}]}]}]}]},
+    {" ", "=", 
+     RowBox[{
+      SubscriptBox["\[Integral]", "R"], 
+      RowBox[{"4", "x", " ", "y", " ", "\[Xi]", 
+       RowBox[{"\[DifferentialD]", "x"}], 
+       RowBox[{"\[DifferentialD]", "y"}], 
+       RowBox[{"\[DifferentialD]", "\[Xi]"}]}]}]}
+   }], TraditionalForm]]]], "Equation",
+ CellChangeTimes->{{3.6684021546841927`*^9, 3.668402223415204*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\[Omega]\[Tau]\
+\:03ad\[Alpha]", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "[", 
+     RowBox[{"x_", ",", "y_", ",", "z_"}], "]"}], ":=", 
+    RowBox[{"4", "x", " ", "y", " ", "z"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Theta]\:03ad\[Tau]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+     "\[Tau]\[Alpha]", " ", "\:03cc\[Rho]\[Iota]\[Alpha]", " ", 
+     "\[Tau]\[Omega]\[Nu]", " ", "x"}], ",", " ", "y"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"min", "=", "0"}], ";", 
+   RowBox[{"max", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", "\[Tau]\[Omega]\[Nu]", 
+    " ", "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omega]\[Nu]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Npoints", "=", "10000"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Alpha]\[Rho]\[Chi]\[Iota]\[Kappa]\:03ad\[FinalSigma]", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ad\[FinalSigma]", " ", 
+    "\[Mu]\[CurlyEpsilon]\[Gamma]\[CurlyEpsilon]\[Theta]\:03ce\[Nu]", " ", 
+    "\[Pi]\[Omicron]\[Upsilon]", " ", "\[Theta]\[Alpha]", " ", 
+    "\[Chi]\[Rho]\[CurlyEpsilon]\[Iota]\[Alpha]\[Sigma]\[Tau]\[Omicron]\:03cd\
+\[Nu]", " ", "\[Sigma]\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\:03cc"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sum2", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+     "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Sigma]\[CurlyEpsilon]", " ", 
+     "\[Mu]\:03af\[Alpha]", " ", 
+     "\[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\:03ac\[Lambda]\[Eta]\[Psi]\[Eta]"}], 
+    ",", " ", 
+    RowBox[{
+    "\:03ad\[Tau]\[Sigma]\[Iota]", " ", "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]",
+      " ", "\[Nu]\[Alpha]", " ", "\[Mu]\[Eta]\[Nu]", " ", 
+     "\[Upsilon]\[Pi]\:03ac\[Rho]\[Chi]\[CurlyEpsilon]\[Iota]", " ", 
+     "\[Theta]\:03ad\[Mu]\[Alpha]", " ", "\[Alpha]\[Nu]", " ", 
+     "\[Zeta]\[Eta]\[Tau]\:03ae\[Sigma]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Pi]\[Omicron]\[Lambda]\:03cd", " ", 
+     "\[Mu]\[CurlyEpsilon]\[Gamma]\:03ac\[Lambda]\[Omega]", " ", 
+     "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", 
+     "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\[Iota]\[Omega]\[Nu]"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "Npoints"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"xi", "=", 
+      RowBox[{"RandomReal", "[", 
+       RowBox[{"{", 
+        RowBox[{"min", ",", "max"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"yi", "=", 
+      RowBox[{"RandomReal", "[", 
+       RowBox[{"{", 
+        RowBox[{"min", ",", "max"}], "}"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"yi", "\[LessEqual]", 
+        RowBox[{"1", "-", "xi"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"zi", "=", 
+         RowBox[{"RandomReal", "[", 
+          RowBox[{"{", 
+           RowBox[{"min", ",", "max"}], "}"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"zi", "\[LessEqual]", 
+           RowBox[{"1", "-", 
+            FractionBox["xi", "2"]}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"gi", "=", 
+            RowBox[{"g", "[", 
+             RowBox[{"xi", ",", "yi", ",", "zi"}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"sum", "=", 
+            RowBox[{"sum", "+", "gi"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"sum2", "=", 
+            RowBox[{"sum2", "+", 
+             SuperscriptBox["gi", "2"]}]}], ";"}]}], "\[IndentingNewLine]", 
+         "]"}]}]}], "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Tau]\[CurlyEpsilon]\[Lambda]\[Iota]\[Kappa]\:03ae", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+    "\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\:03ce\[Mu]\
+\[Alpha]\[Tau]\[Omicron]\[FinalSigma]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"estimation", "=", 
+   FractionBox["sum", "Npoints"]}], ";", 
+  RowBox[{"var", "=", 
+   RowBox[{
+    FractionBox["1", "Npoints"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "Npoints"], "sum2"}], "-", 
+      SuperscriptBox["estimation", "2"]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\!\(\*SubscriptBox[\(\[Integral]\), \(R\)]\)xyz\[DifferentialD]x\
+\[DifferentialD]y \[TildeEqual] ``\[PlusMinus] ``\>\"", ",", "estimation", 
+   ",", "var"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\[CapitalEta] \[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\
+\[Kappa]\:03ae \[Tau]\[Iota]\[Mu]\:03ae \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\
+\[Pi]\[Tau]\[CurlyEpsilon]\[Iota] ``.\>\"", ",", 
+   RowBox[{"13.", "/", "240"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6682244639058237`*^9, 3.6682244808805647`*^9}, {
+   3.6682246859423213`*^9, 3.6682247589225597`*^9}, {3.668224839456156*^9, 
+   3.668224839572037*^9}, {3.6682249565544167`*^9, 3.668225101221861*^9}, {
+   3.6682252081753263`*^9, 3.668225310237194*^9}, {3.668225402446898*^9, 
+   3.668225483372571*^9}, {3.6682255299857597`*^9, 3.668225531869869*^9}, {
+   3.668225714212432*^9, 3.668225816677905*^9}, {3.6682258671406507`*^9, 
+   3.6682258868748355`*^9}, {3.668361785600407*^9, 3.668361813929085*^9}, {
+   3.668361859550539*^9, 3.668361877524001*^9}, {3.66836193108753*^9, 
+   3.6683620071168613`*^9}, {3.6683620790111427`*^9, 3.668362755121368*^9}, {
+   3.6683635965259624`*^9, 3.6683636258510118`*^9}, {3.6683636563067894`*^9, 
+   3.668363765213892*^9}, {3.6683638435941224`*^9, 3.6683638896217117`*^9}, {
+   3.6683639549680595`*^9, 3.6683640086237416`*^9}, {3.6683642407262416`*^9, 
+   3.6683642539536753`*^9}, {3.668364288055046*^9, 3.668364301218891*^9}, {
+   3.668366824021905*^9, 3.668366907077319*^9}, {3.6683669914103003`*^9, 
+   3.668367010484019*^9}, {3.668367563148945*^9, 3.6683675768620343`*^9}, {
+   3.668367650239045*^9, 3.6683676922677*^9}, {3.668399665353939*^9, 
+   3.668399686576432*^9}, {3.668399774958691*^9, 3.668399799326955*^9}, {
+   3.6683998643241005`*^9, 3.6683999505116367`*^9}, {3.6684003402504673`*^9, 
+   3.668400359893094*^9}, 3.6684004582005825`*^9, {3.6684008476370153`*^9, 
+   3.6684008846502495`*^9}, {3.668401761242918*^9, 3.6684017801527925`*^9}, {
+   3.66840222769411*^9, 3.668402276109885*^9}, {3.6684023937199955`*^9, 
+   3.6684024190827007`*^9}, {3.6684026851361847`*^9, 
+   3.6684027092840023`*^9}, {3.668402851959449*^9, 3.668402883370875*^9}, {
+   3.6684029633890676`*^9, 3.6684030360707607`*^9}, {3.668403220013458*^9, 
+   3.668403244911597*^9}, {3.6684032936895933`*^9, 3.668403308582415*^9}, {
+   3.6684130962662897`*^9, 3.6684131574755297`*^9}, 3.6684136734955397`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\\!\\(\\*SubscriptBox[\\(\[Integral]\\), \
+\\(R\\)]\\)xyz\[DifferentialD]x\[DifferentialD]y \[TildeEqual] \
+\\!\\(\\*RowBox[{\\\"0.053038215123562396`\\\"}]\\)\[PlusMinus] \
+\\!\\(\\*RowBox[{\\\"1.1752820632882638`*^-6\\\"}]\\)\"\>",
+  StringForm[
+  "\!\(\*SubscriptBox[\(\[Integral]\), \(R\)]\)xyz\[DifferentialD]x\
+\[DifferentialD]y \[TildeEqual] ``\[PlusMinus] ``", 0.053038215123562396`, 
+   1.1752820632882638`*^-6],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6684008787935443`*^9, 3.668400885241089*^9}, 
+   3.6684017859930334`*^9, 3.6684022315016627`*^9, 3.6684023890193815`*^9, {
+   3.6684029920452557`*^9, 3.6684030461169033`*^9}, {3.6684032268554688`*^9, 
+   3.668403246980668*^9}, 3.6684033092325315`*^9, {3.668413124725348*^9, 
+   3.668413161931531*^9}, 3.66841367418991*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\[CapitalEta] \
+\[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\
+\[Iota]\[Mu]\:03ae \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\[Pi]\[Tau]\
+\[CurlyEpsilon]\[Iota] \
+\\!\\(\\*RowBox[{\\\"0.05416666666666667`\\\"}]\\).\"\>",
+  StringForm[
+  "\[CapitalEta] \
+\[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\
+\[Iota]\[Mu]\:03ae \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\[Pi]\[Tau]\
+\[CurlyEpsilon]\[Iota] ``.", 0.05416666666666667],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.6684008787935443`*^9, 3.668400885241089*^9}, 
+   3.6684017859930334`*^9, 3.6684022315016627`*^9, 3.6684023890193815`*^9, {
+   3.6684029920452557`*^9, 3.6684030461169033`*^9}, {3.6684032268554688`*^9, 
+   3.668403246980668*^9}, 3.6684033092325315`*^9, {3.668413124725348*^9, 
+   3.668413161931531*^9}, 3.6684136741944103`*^9}]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0386\[Sigma]\[Kappa]\[Eta]\[Sigma]\[Eta] 7.5.1-3", "ChapterNC",
+ CellChangeTimes->{
+  3.6407012833362303`*^9, {3.667999065690297*^9, 3.6679990892111826`*^9}}],
+
+Cell["\<\
+\[CapitalNu]\[Alpha] \[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\
+\[Iota]\[Sigma]\[Tau]\[CurlyEpsilon]\:03af \[Mu]\[CurlyEpsilon] \[Tau]\[Eta] \
+\[Mu]\:03ad\[Theta]\[Omicron]\[Delta]\[Omicron] M.C. \[Kappa]\[Alpha]\[Iota] \
+\[Mu]\[CurlyEpsilon] \[Tau]\[Omicron]\[Nu] \[Kappa]\[Alpha]\[Nu]\:03cc\[Nu]\
+\[Alpha] \[Tau]\[Omicron]\[Upsilon] \[Tau]\[Rho]\[Alpha]\[Pi]\[CurlyEpsilon]\
+\[Zeta]\:03af\[Omicron]\[Upsilon] \[Tau]\[Omicron] \[Omicron]\[Lambda]\
+\[Omicron]\[Kappa]\[Lambda]\:03ae\[Rho]\[Omega]\[Mu]\[Alpha]\
+\>", "Text",
+ CellChangeTimes->{{3.6679993902582664`*^9, 3.667999410273924*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{"I", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "0", "1"], 
+       RowBox[{
+        RowBox[{"\[DifferentialD]", 
+         SubscriptBox["x", "1"]}], 
+        RowBox[{
+         SubsuperscriptBox["\[Integral]", "0", "1"], 
+         RowBox[{"\[DifferentialD]", 
+          SubscriptBox["x", "2"]}]}]}]}], "..."}], 
+     RowBox[{
+      SubsuperscriptBox["\[Integral]", "0", "1"], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            SubscriptBox["x", "1"], "+", 
+            SubscriptBox["x", "2"], "+"}], "..."}], "+", 
+          SubscriptBox["x", "10"]}], ")"}], "2"], 
+       RowBox[{"\[DifferentialD]", 
+        SubscriptBox["x", "10"]}]}]}]}], "=", 
+    FractionBox["155", "6"]}]}], TraditionalForm]]]], "Equation",
+ CellChangeTimes->{{3.66799941413435*^9, 3.6679994863726015`*^9}, {
+  3.6684132714506493`*^9, 3.668413271451158*^9}}],
+
+Cell["\[CapitalLambda]\:03cd\[Sigma]\[Eta]", "Equation",
+ CellChangeTimes->{{3.667998951011586*^9, 3.6679989518511257`*^9}}],
+
+Cell[TextData[{
+ "\:038c\[Lambda]\[CurlyEpsilon]\[FinalSigma] \[Omicron]\[Iota] \[Mu]\
+\[CurlyEpsilon]\[Tau]\[Alpha]\[Beta]\[Lambda]\[Eta]\[Tau]\:03ad\[FinalSigma] \
+\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \[Sigma]\[Tau]\[Omicron] \[Delta]\
+\[Iota]\:03ac\[Sigma]\[Tau]\[Eta]\[Mu]\[Alpha] ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"[", 
+    RowBox[{"0", ",", "1"}], "]"}], TraditionalForm]]],
+ ", \[CurlyEpsilon]\[Pi]\[Omicron]\[Mu]\:03ad\[Nu]\[Omega]\[FinalSigma] \[Pi]\
+\[CurlyEpsilon]\[Rho]\[Nu]\:03ac\[Mu]\[CurlyEpsilon] \[Kappa]\[Alpha]\[Tau]\
+\[CurlyEpsilon]\[Upsilon]\[Theta]\[CurlyEpsilon]\:03af\[Alpha]\[Nu] \[Sigma]\
+\[Tau]\[Omicron]\[Nu] \[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\
+\[Iota]\[Sigma]\[Tau]\:03cc \[Tau]\[Omicron]\[Upsilon] \[Omicron]\[Lambda]\
+\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\:03ce\[Mu]\[Alpha]\[Tau]\[Omicron]\
+\[FinalSigma] \[Mu]\[CurlyEpsilon] \[Tau]\[Eta] \[Mu]\:03ad\[Theta]\[Omicron]\
+\[Delta]\[Omicron] Monte Carlo."
+}], "Text",
+ CellChangeTimes->{{3.66841317384331*^9, 3.6684131965446787`*^9}, {
+  3.6684135408380427`*^9, 3.6684135461492057`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\[Omega]\[Tau]\
+\:03ad\[Alpha]", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"g", "[", 
+     RowBox[{"x_List", "/;", 
+      RowBox[{
+       RowBox[{"Length", "[", "x", "]"}], "\[Equal]", "10"}]}], "]"}], ":=", 
+    SuperscriptBox[
+     RowBox[{"Total", "[", "x", "]"}], "2"]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Theta]\:03ad\[Tau]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+     "\[Tau]\[Alpha]", " ", "\:03cc\[Rho]\[Iota]\[Alpha]", " ", 
+     "\[Tau]\[Omega]\[Nu]", " ", "x"}], ",", " ", "y"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"min", "=", "0"}], ";", 
+   RowBox[{"max", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", "\[Tau]\[Omega]\[Nu]", 
+    " ", "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omega]\[Nu]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Npoints", "=", "10000"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Omicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", 
+    " ", "\[Alpha]\[Rho]\[Chi]\[Iota]\[Kappa]\:03ad\[FinalSigma]", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ad\[FinalSigma]", " ", 
+    "\[Mu]\[CurlyEpsilon]\[Gamma]\[CurlyEpsilon]\[Theta]\:03ce\[Nu]", " ", 
+    "\[Pi]\[Omicron]\[Upsilon]", " ", "\[Theta]\[Alpha]", " ", 
+    "\[Chi]\[Rho]\[CurlyEpsilon]\[Iota]\[Alpha]\[Sigma]\[Tau]\[Omicron]\:03cd\
+\[Nu]", " ", "\[Sigma]\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\:03cc"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sum", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sum2", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+     "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Sigma]\[CurlyEpsilon]", " ", 
+     "\[Mu]\:03af\[Alpha]", " ", 
+     "\[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\:03ac\[Lambda]\[Eta]\[Psi]\[Eta]"}], 
+    ",", " ", 
+    RowBox[{
+    "\:03ad\[Tau]\[Sigma]\[Iota]", " ", "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]",
+      " ", "\[Nu]\[Alpha]", " ", "\[Mu]\[Eta]\[Nu]", " ", 
+     "\[Upsilon]\[Pi]\:03ac\[Rho]\[Chi]\[CurlyEpsilon]\[Iota]", " ", 
+     "\[Theta]\:03ad\[Mu]\[Alpha]", " ", "\[Alpha]\[Nu]", " ", 
+     "\[Zeta]\[Eta]\[Tau]\:03ae\[Sigma]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Pi]\[Omicron]\[Lambda]\:03cd", " ", 
+     "\[Mu]\[CurlyEpsilon]\[Gamma]\:03ac\[Lambda]\[Omega]", " ", 
+     "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", 
+     "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\[Iota]\[Omega]\[Nu]"}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "\[LessEqual]", "Npoints"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"x", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"RandomReal", "[", 
+         RowBox[{"{", 
+          RowBox[{"min", ",", "max"}], "}"}], "]"}], ",", 
+        RowBox[{"{", "10", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"gi", "=", 
+      RowBox[{"g", "[", "x", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"sum", "=", 
+      RowBox[{"sum", "+", "gi"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"sum2", "=", 
+      RowBox[{"sum2", "+", 
+       SuperscriptBox["gi", "2"]}]}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Tau]\[CurlyEpsilon]\[Lambda]\[Iota]\[Kappa]\:03ae", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+    "\[Omicron]\[Lambda]\[Omicron]\[Kappa]\[Lambda]\[Eta]\[Rho]\:03ce\[Mu]\
+\[Alpha]\[Tau]\[Omicron]\[FinalSigma]"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"estimation", "=", 
+   FractionBox["sum", "Npoints"]}], ";", 
+  RowBox[{"var", "=", 
+   RowBox[{
+    FractionBox["1", "Npoints"], 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "Npoints"], "sum2"}], "-", 
+      SuperscriptBox["estimation", "2"]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \(1\)]\)\
+\[DifferentialD]\!\(\*SubscriptBox[\(x\), \(1\)]\)\!\(\*SubsuperscriptBox[\(\
+\[Integral]\), \(0\), \(1\)]\)\[DifferentialD]\!\(\*SubscriptBox[\(x\), \
+\(2\)]\)...\!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \
+\(1\)]\)(\!\(\*SubscriptBox[\(x\), \(1\)]\)+\!\(\*SubscriptBox[\(x\), \
+\(2\)]\)+...+\!\(\*SubscriptBox[\(x\), \(10\)]\)\!\(\*SuperscriptBox[\()\), \
+\(2\)]\)\[DifferentialD]\!\(\*SubscriptBox[\(x\), \(10\)]\) \[TildeEqual] ``\
+\[PlusMinus] ``\>\"", ",", "estimation", ",", "var"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\[CapitalEta] \[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\
+\[Kappa]\:03ae \[Tau]\[Iota]\[Mu]\:03ae \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\
+\[Pi]\[Tau]\[CurlyEpsilon]\[Iota] ``.\>\"", ",", 
+   RowBox[{"155.", "/", "6"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6682244639058237`*^9, 3.6682244808805647`*^9}, {
+   3.6682246859423213`*^9, 3.6682247589225597`*^9}, {3.668224839456156*^9, 
+   3.668224839572037*^9}, {3.6682249565544167`*^9, 3.668225101221861*^9}, {
+   3.6682252081753263`*^9, 3.668225310237194*^9}, {3.668225402446898*^9, 
+   3.668225483372571*^9}, {3.6682255299857597`*^9, 3.668225531869869*^9}, {
+   3.668225714212432*^9, 3.668225816677905*^9}, {3.6682258671406507`*^9, 
+   3.6682258868748355`*^9}, {3.668361785600407*^9, 3.668361813929085*^9}, {
+   3.668361859550539*^9, 3.668361877524001*^9}, {3.66836193108753*^9, 
+   3.6683620071168613`*^9}, {3.6683620790111427`*^9, 3.668362755121368*^9}, {
+   3.6683635965259624`*^9, 3.6683636258510118`*^9}, {3.6683636563067894`*^9, 
+   3.668363765213892*^9}, {3.6683638435941224`*^9, 3.6683638896217117`*^9}, {
+   3.6683639549680595`*^9, 3.6683640086237416`*^9}, {3.6683642407262416`*^9, 
+   3.6683642539536753`*^9}, {3.668364288055046*^9, 3.668364301218891*^9}, {
+   3.668366824021905*^9, 3.668366907077319*^9}, {3.6683669914103003`*^9, 
+   3.668367010484019*^9}, {3.668367563148945*^9, 3.6683675768620343`*^9}, {
+   3.668367650239045*^9, 3.6683676922677*^9}, {3.668399665353939*^9, 
+   3.668399686576432*^9}, {3.668399774958691*^9, 3.668399799326955*^9}, {
+   3.6683998643241005`*^9, 3.6683999505116367`*^9}, {3.6684003402504673`*^9, 
+   3.668400359893094*^9}, 3.6684004582005825`*^9, {3.6684008476370153`*^9, 
+   3.6684008846502495`*^9}, {3.668401761242918*^9, 3.6684017801527925`*^9}, {
+   3.66840222769411*^9, 3.668402276109885*^9}, {3.6684023937199955`*^9, 
+   3.6684024190827007`*^9}, {3.6684026851361847`*^9, 
+   3.6684027092840023`*^9}, {3.668402851959449*^9, 3.668402883370875*^9}, {
+   3.6684029633890676`*^9, 3.6684030360707607`*^9}, {3.668403220013458*^9, 
+   3.668403244911597*^9}, {3.6684032936895933`*^9, 3.668403308582415*^9}, {
+   3.6684130962662897`*^9, 3.6684131574755297`*^9}, {3.6684132089034233`*^9, 
+   3.6684132580764933`*^9}, {3.6684133040261707`*^9, 
+   3.6684134005366096`*^9}, {3.6684134470441613`*^9, 3.668413523485809*^9}, 
+   3.6684136887742796`*^9, {3.668413724139466*^9, 3.6684137256092043`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\\!\\(\\*SubsuperscriptBox[\\(\[Integral]\\), \
+\\(0\\), \\(1\\)]\\)\[DifferentialD]\\!\\(\\*SubscriptBox[\\(x\\), \
+\\(1\\)]\\)\\!\\(\\*SubsuperscriptBox[\\(\[Integral]\\), \\(0\\), \\(1\\)]\\)\
+\[DifferentialD]\\!\\(\\*SubscriptBox[\\(x\\), \
+\\(2\\)]\\)...\\!\\(\\*SubsuperscriptBox[\\(\[Integral]\\), \\(0\\), \\(1\\)]\
+\\)(\\!\\(\\*SubscriptBox[\\(x\\), \\(1\\)]\\)+\\!\\(\\*SubscriptBox[\\(x\\), \
+\\(2\\)]\\)+...+\\!\\(\\*SubscriptBox[\\(x\\), \
+\\(10\\)]\\)\\!\\(\\*SuperscriptBox[\\()\\), \
+\\(2\\)]\\)\[DifferentialD]\\!\\(\\*SubscriptBox[\\(x\\), \\(10\\)]\\) \
+\[TildeEqual] \\!\\(\\*RowBox[{\\\"25.82484498127428`\\\"}]\\)\[PlusMinus] \
+\\!\\(\\*RowBox[{\\\"0.00866174973887205`\\\"}]\\)\"\>",
+  StringForm[
+  "\!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \(1\)]\)\[DifferentialD]\!\
+\(\*SubscriptBox[\(x\), \(1\)]\)\!\(\*SubsuperscriptBox[\(\[Integral]\), \
+\(0\), \(1\)]\)\[DifferentialD]\!\(\*SubscriptBox[\(x\), \
+\(2\)]\)...\!\(\*SubsuperscriptBox[\(\[Integral]\), \(0\), \
+\(1\)]\)(\!\(\*SubscriptBox[\(x\), \(1\)]\)+\!\(\*SubscriptBox[\(x\), \
+\(2\)]\)+...+\!\(\*SubscriptBox[\(x\), \(10\)]\)\!\(\*SuperscriptBox[\()\), \
+\(2\)]\)\[DifferentialD]\!\(\*SubscriptBox[\(x\), \(10\)]\) \[TildeEqual] ``\
+\[PlusMinus] ``", 25.82484498127428, 0.00866174973887205],
+  Editable->False]], "Output",
+ CellChangeTimes->{
+  3.6684133431321545`*^9, {3.668413392171624*^9, 3.6684134013026686`*^9}, {
+   3.668413525337984*^9, 3.668413536454638*^9}, 3.6684136894414487`*^9, {
+   3.668413729194601*^9, 3.6684137389583683`*^9}, 3.6684177873844366`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\[CapitalEta] \
+\[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\
+\[Iota]\[Mu]\:03ae \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\[Pi]\[Tau]\
+\[CurlyEpsilon]\[Iota] \\!\\(\\*RowBox[{\\\"25.833333333333332`\\\"}]\\).\"\>",
+  StringForm[
+  "\[CapitalEta] \
+\[Alpha]\[Nu]\[Alpha]\[Lambda]\[Upsilon]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\
+\[Iota]\[Mu]\:03ae \[Pi]\[Rho]\[Omicron]\[Kappa]\:03cd\[Pi]\[Tau]\
+\[CurlyEpsilon]\[Iota] ``.", 25.833333333333332`],
+  Editable->False]], "Output",
+ CellChangeTimes->{
+  3.6684133431321545`*^9, {3.668413392171624*^9, 3.6684134013026686`*^9}, {
+   3.668413525337984*^9, 3.668413536454638*^9}, 3.6684136894414487`*^9, {
+   3.668413729194601*^9, 3.6684137389583683`*^9}, 3.6684177874000483`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{735, 564},
+WindowMargins->{{306, Automatic}, {29, Automatic}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.3199999999999, 841.92}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[StyleDefinitions -> "Default.nb"]], 
+   Cell[
+    StyleData[All], FontFamily -> "Book Antiqua"], 
+   Cell[
+    CellGroupData[{
+      Cell[
+       StyleData["BOOK TITLE"], CellFrame -> True, ShowGroupOpener -> True, 
+       GroupOpenerInsideFrame -> True, CellMargins -> {{10, 10}, {5, 10}}, 
+       StyleKeyMapping -> {"Tab" -> "SUBBOOK TITLE"}, 
+       CellGroupingRules -> {"TitleGrouping", 0}, PageBreakAbove -> True, 
+       PageBreakWithin -> False, PageBreakBelow -> False, CellFrameMargins -> 
+       15, CellFrameStyle -> Thickness[2.5], TextAlignment -> Center, 
+       TextJustification -> 0., 
+       CounterAssignments -> {{"Chapter", 0}, {"SubChapter", 0}, {
+         "SubSubChapte", 0}, {"Question", 0}, {"ItemNumbered", 0}}, 
+       MenuSortingValue -> 1, MenuCommandKey -> "1", FontSize -> 30, 
+       FontWeight -> "ExtraBold", Background -> 
+       RGBColor[0.72549, 0.690196, 0.690196]], 
+      Cell[
+       StyleData["BOOK TITLE", "Printout"], CellFrame -> True, 
+       CellMargins -> {{10, 10}, {5, 10}}, 
+       StyleKeyMapping -> {"Tab" -> "SUBBOOK TITLE"}, 
+       CellGroupingRules -> {"TitleGrouping", 0}, PageBreakAbove -> True, 
+       PageBreakWithin -> False, PageBreakBelow -> False, CellFrameMargins -> 
+       15, CellFrameStyle -> Thickness[2.5], TextAlignment -> Center, 
+       TextJustification -> 0., 
+       CounterAssignments -> {{"Chapter", 0}, {"SubChapter", 0}, {
+         "SubSubChapte", 0}, {"Question", 0}, {"ItemNumbered", 0}}, 
+       MenuSortingValue -> 1, MenuCommandKey -> "1", FontSize -> 30, 
+       FontWeight -> "ExtraBold", Background -> 
+       RGBColor[0.72549, 0.690196, 0.690196]]}, Closed]], 
+   Cell[
+    StyleData["SUBBOOK TITLE"], CellFrame -> True, ShowGroupOpener -> True, 
+    GroupOpenerInsideFrame -> True, CellMargins -> {{20, 20}, {10, 20}}, 
+    StyleKeyMapping -> {
+     "Backspace" -> "BOOK TITLE", "Tab" -> "SUBSUBBOOK TITLE"}, 
+    CellGroupingRules -> {"SectionGrouping", 5}, PageBreakWithin -> False, 
+    PageBreakBelow -> False, CellFrameMargins -> 10, CellFrameStyle -> 
+    Thickness[2], TextAlignment -> Center, TextJustification -> 0., 
+    CounterAssignments -> {{"Chapter", 0}, {"SubChapter", 0}, {
+      "SubSubChapte", 0}, {"Question", 0}, {"ItemNumbered", 0}}, 
+    MenuSortingValue -> 2, MenuCommandKey -> None, FontSize -> 26, FontWeight -> 
+    "ExtraBold", Background -> RGBColor[0.62549, 0.70196, 0.600196]], 
+   Cell[
+    StyleData["SUBSUBBOOK TITLE"], CellFrame -> True, ShowGroupOpener -> True,
+     GroupOpenerInsideFrame -> True, CellMargins -> {{25, 25}, {10, 20}}, 
+    StyleKeyMapping -> {"Backspace" -> "SUBBOOK TITLE"}, 
+    CellGroupingRules -> {"SectionGrouping", 8}, PageBreakWithin -> False, 
+    PageBreakBelow -> False, CellFrameMargins -> 10, CellFrameStyle -> 
+    Thickness[1.75], TextAlignment -> Center, TextJustification -> 0., 
+    CounterAssignments -> {{"Chapter", 0}, {"SubChapter", 0}, {
+      "SubSubChapte", 0}, {"Question", 0}, {"ItemNumbered", 0}}, 
+    MenuSortingValue -> 3, MenuCommandKey -> None, FontSize -> 22, FontWeight -> 
+    "ExtraBold", Background -> RGBColor[1., 0.72, 0.52]], 
+   Cell[
+    StyleData["Chapter"], CellDingbat -> Cell[
+      TextData[{
+       "\[CapitalKappa]\[CurlyEpsilon]\[CurlyPhi]\:03ac\[Lambda]\[Alpha]\
+\[Iota]\[Omicron]  ", 
+        CounterBox["Chapter"], ":"}], FontWeight -> "Bold"], ShowGroupOpener -> 
+    True, GroupOpenerInsideFrame -> True, CellMargins -> {{160, 0}, {6, 20}}, 
+    StyleKeyMapping -> {"Tab" -> "SubChapter"}, 
+    CellGroupingRules -> {"SectionGrouping", 10}, CellFrameMargins -> 5, 
+    CellChangeTimes -> {3.6407012833362303`*^9}, CounterIncrements -> 
+    "Chapter", 
+    CounterAssignments -> {{"SubChapter", 0}, {"SubSubChapte", 0}, {
+      "Question", 0}, {"ItemNumbered", 0}}, MenuSortingValue -> 10, 
+    MenuCommandKey -> "2", FontSize -> 24, FontWeight -> "Bold", FontColor -> 
+    GrayLevel[0.2]], 
+   Cell[
+    StyleData["ChapterNC"], ShowGroupOpener -> True, GroupOpenerInsideFrame -> 
+    True, CellMargins -> {{20, 0}, {6, 20}}, 
+    StyleKeyMapping -> {"Tab" -> "SubChapterNC"}, 
+    CellGroupingRules -> {"SectionGrouping", 10}, CellFrameMargins -> 5, 
+    CellChangeTimes -> {3.6407012833362303`*^9}, 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 10, 
+    MenuCommandKey -> "3", FontSize -> 24, FontWeight -> "Bold", FontColor -> 
+    GrayLevel[0.2]], 
+   Cell[
+    StyleData["SubChapter"], CellDingbat -> Cell[
+      TextData[{
+        CounterBox["Chapter"], ".", 
+        CounterBox["SubChapter"], "."}], FontWeight -> "Bold"], 
+    ShowGroupOpener -> True, GroupOpenerInsideFrame -> True, 
+    CellMargins -> {{70, 0}, {4, 16}}, 
+    StyleKeyMapping -> {"Tab" -> "SubSubChapter", "Backspace" -> "Chapter"}, 
+    CellGroupingRules -> {"SectionGrouping", 20}, CellFrameMargins -> 5, 
+    CellChangeTimes -> {3.640701274346218*^9}, CounterIncrements -> 
+    "SubChapter", 
+    CounterAssignments -> {{"SubSubChapter", 0}, {"Question", 0}, {
+      "Problem", 0}, {"ItemNumbered", 0}, {"Image", 0}, {
+      "Equation - numbered", 0}}, MenuSortingValue -> 11, MenuCommandKey -> 
+    "None", FontSize -> 22, FontWeight -> "Bold", FontColor -> 
+    GrayLevel[0.35]], 
+   Cell[
+    StyleData["SubChapterNC"], ShowGroupOpener -> True, 
+    GroupOpenerInsideFrame -> True, CellMargins -> {{30, 0}, {4, 16}}, 
+    StyleKeyMapping -> {
+     "Tab" -> "SubSubChapterNC", "Backspace" -> "ChapterNC"}, 
+    CellGroupingRules -> {"SectionGrouping", 20}, CellFrameMargins -> 5, 
+    CellChangeTimes -> {3.640701274346218*^9}, 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 11, 
+    MenuCommandKey -> "None", FontSize -> 22, FontWeight -> "Bold", FontColor -> 
+    GrayLevel[0.35]], 
+   Cell[
+    StyleData["SubSubChapter"], CellDingbat -> Cell[
+      TextData[{
+        CounterBox["Chapter"], ".", 
+        CounterBox["SubChapter"], ".", 
+        CounterBox["SubSubChapter"]}], FontWeight -> "Bold"], ShowGroupOpener -> 
+    True, GroupOpenerInsideFrame -> True, CellMargins -> {{90, 0}, {4, 13}}, 
+    StyleKeyMapping -> {"Backspace" -> "SubChapter"}, 
+    CellGroupingRules -> {"SectionGrouping", 30}, CellFrameMargins -> 5, 
+    CounterIncrements -> "SubSubChapter", 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 12, 
+    MenuCommandKey -> "None", FontSize -> 20, FontWeight -> "Bold", FontColor -> 
+    GrayLevel[0.5]], 
+   Cell[
+    StyleData["SubSubChapterNC"], ShowGroupOpener -> True, 
+    GroupOpenerInsideFrame -> True, CellMargins -> {{45, 0}, {4, 13}}, 
+    StyleKeyMapping -> {"Backspace" -> "SubChapterNC"}, 
+    CellGroupingRules -> {"SectionGrouping", 30}, CellFrameMargins -> 5, 
+    CounterIncrements -> "SubSubChapter", 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 12, 
+    MenuCommandKey -> "None", FontSize -> 20, FontWeight -> "Bold", FontColor -> 
+    GrayLevel[0.5]], 
+   Cell[
+    StyleData["Titlos"], ShowGroupOpener -> True, GroupOpenerInsideFrame -> 
+    True, CellMargins -> {{50, 0}, {5, 10}}, 
+    StyleKeyMapping -> {"Tab" -> "Ypotitlos"}, 
+    CellGroupingRules -> {"SectionGrouping", 50}, 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 35, 
+    MenuCommandKey -> "4", FontSize -> 18, FontWeight -> "Bold"], 
+   Cell[
+    StyleData["Ypotitlos"], ShowGroupOpener -> True, GroupOpenerInsideFrame -> 
+    True, CellMargins -> {{60, 0}, {5, 8}}, 
+    StyleKeyMapping -> {"Backspace" -> "Titlos"}, 
+    CellGroupingRules -> {"SectionGrouping", 60}, 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 40, 
+    MenuCommandKey -> "None", FontSize -> 16, FontWeight -> "Bold", FontSlant -> 
+    "Italic"], 
+   Cell[
+    StyleData["Text"], CellMargins -> {{65, 0}, {0, 1}}, 
+    StyleKeyMapping -> {"Backspace" -> "TextSection", "Tab" -> "TextLineTop"},
+     TextJustification -> 1., LineSpacing -> {1, 1, 1}, MenuSortingValue -> 
+    1100, MenuCommandKey -> "k", FontSize -> 14], 
+   Cell[
+    StyleData["TextLineTop"], CellFrame -> {{0, 0}, {0, 0.5}}, 
+    CellMargins -> {{65, 0}, {0, 1}}, 
+    StyleKeyMapping -> {"Backspace" -> "Text"}, TextJustification -> 1., 
+    LineSpacing -> {1, 1, 1}, MenuSortingValue -> 1105, MenuCommandKey -> 
+    "None", FontSize -> 14], 
+   Cell[
+    StyleData["TextSection"], CellFrame -> {{0, 0}, {0, 1}}, 
+    CellMargins -> {{65, 0}, {2, 10}}, StyleKeyMapping -> {"Tab" -> "Text"}, 
+    TextJustification -> 1., LineSpacing -> {1.1, 1.1, 2.}, MenuSortingValue -> 
+    1095, MenuCommandKey -> None, FontSize -> 12, FontWeight -> Bold, 
+    FontSlant -> Italic, FontVariations -> {"Underline" -> True}], 
+   Cell[
+    StyleData["TextGold"], CellMargins -> {{65, 0}, {0, 1}}, 
+    TextJustification -> 1., LineSpacing -> {1, 1, 1}, MenuSortingValue -> 
+    1101, MenuCommandKey -> "g", FontSize -> 14, FontColor -> 
+    RGBColor[0.917647, 0.458824, 0]], 
+   Cell[
+    StyleData["TextRed"], CellMargins -> {{65, 0}, {0, 1}}, 
+    StyleKeyMapping -> {"Backspace" -> "TextSection"}, TextJustification -> 
+    1., LineSpacing -> {1, 1, 1}, MenuSortingValue -> 1101, MenuCommandKey -> 
+    "f", FontSize -> 14, FontColor -> RGBColor[0.8, 0, 0]], 
+   Cell[
+    StyleData["note"], CellMargins -> {{75, 75}, {5, 5}}, TextAlignment -> 
+    Center, TextJustification -> 1., MenuSortingValue -> 1500, MenuCommandKey -> 
+    "n", FontSize -> 13, FontSlant -> "Italic"], 
+   Cell[
+    StyleData["comment"], CellMargins -> {{75, 75}, {5, 5}}, TextAlignment -> 
+    Center, TextJustification -> 1., MenuSortingValue -> 1510, MenuCommandKey -> 
+    "c", FontSize -> 13, FontSlant -> "Italic", FontColor -> 
+    RGBColor[0.909804, 0, 0.0196078], Background -> 
+    RGBColor[0.980392, 0.968627, 0.552941]], 
+   Cell[
+    StyleData["ItemNumbered"], CellMargins -> {{65, 10}, {1, 1}}, 
+    TextJustification -> 1., 
+    CounterAssignments -> {{"SubitemNumbered", 0}, {"SubsubitemNumbered", 0}},
+     MenuSortingValue -> 1201, MenuCommandKey -> "j", FontSize -> 14], 
+   Cell[
+    StyleData["SubitemNumbered"], CellDingbat -> Cell[
+      TextData[{
+        CounterBox["SubitemNumbered"], "."}], FontWeight -> "Bold"], 
+    CellMargins -> {{75, 10}, {1, 1}}, TextJustification -> 1., 
+    MenuSortingValue -> None, MenuCommandKey -> None, FontSize -> 14, 
+    CounterBoxOptions -> {CounterFunction :> (Part[
+        CharacterRange["\[Alpha]", "\[Omega]"], #]& )}], 
+   Cell[
+    StyleData["SubsubitemNumbered"], CellDingbat -> Cell[
+      TextData[{
+        CounterBox["SubsubitemNumbered"], "."}], FontWeight -> "Bold"], 
+    CellMargins -> {{85, 10}, {1, 1}}, TextJustification -> 1., 
+    MenuSortingValue -> None, MenuCommandKey -> None, FontSize -> 14, 
+    CounterBoxOptions -> {CounterFunction :> RomanNumeral}], 
+   Cell[
+    StyleData["Item"], CellDingbat -> "\[FilledSmallCircle]", 
+    CellMargins -> {{65, 10}, {1, 1}}, TextJustification -> 1., 
+    MenuSortingValue -> 1200, MenuCommandKey -> "l"], 
+   Cell[
+    StyleData["Subitem"], CellDingbat -> "\[FilledSmallSquare]", 
+    CellMargins -> {{75, 10}, {1, 1}}, 
+    StyleKeyMapping -> {"Tab" -> "Subsubitem", "Backspace" -> "Item"}, 
+    TextJustification -> 1., MenuSortingValue -> 1210, MenuCommandKey -> None,
+     FontSize -> 14], 
+   Cell[
+    StyleData["Subsubitem"], CellDingbat -> "\[FivePointedStar]", 
+    CellMargins -> {{85, 10}, {1, 1}}, 
+    StyleKeyMapping -> {"Backspace" -> "Subitem", "Tab" -> "Subsubsubitem"}, 
+    TextJustification -> 1., MenuSortingValue -> 1220, MenuCommandKey -> None,
+     FontSize -> 14], 
+   Cell[
+    StyleData["Subsubsubitem"], CellDingbat -> "\[FilledUpTriangle]", 
+    CellMargins -> {{95, 10}, {1, 1}}, 
+    StyleKeyMapping -> {"Backspace" -> "Subsubitem"}, TextJustification -> 1.,
+     MenuSortingValue -> 1230, MenuCommandKey -> None, FontSize -> 14], 
+   Cell[
+    StyleData["ItemParagraph"], CellMargins -> {{65, 10}, {0, 1}}, 
+    ReturnCreatesNewCell -> False, TextJustification -> 1., MenuSortingValue -> 
+    1202, MenuCommandKey -> "p", FontColor -> GrayLevel[0]], 
+   Cell[
+    StyleData["SubitemParagraph"], CellMargins -> {{75, 10}, {0, 1}}, 
+    ReturnCreatesNewCell -> False, 
+    StyleKeyMapping -> {
+     "Tab" -> "SubsubitemParagraph", "Backspace" -> "ItemParagraph"}, 
+    TextJustification -> 1., MenuSortingValue -> 1212, MenuCommandKey -> None,
+     FontSize -> 14, FontColor -> GrayLevel[0]], 
+   Cell[
+    StyleData["SubsubitemParagraph"], CellMargins -> {{85, 10}, {0, 1}}, 
+    ReturnCreatesNewCell -> False, 
+    StyleKeyMapping -> {
+     "Backspace" -> "SubitemParagraph", "Tab" -> "SubsubsubitemParagraph"}, 
+    TextJustification -> 1., MenuSortingValue -> 1222, MenuCommandKey -> None,
+     FontSize -> 14, FontColor -> GrayLevel[0]], 
+   Cell[
+    StyleData["SubsubsubitemParagraph"], CellMargins -> {{95, 10}, {0, 1}}, 
+    ReturnCreatesNewCell -> False, 
+    StyleKeyMapping -> {"Backspace" -> "SubsubitemParagraph"}, 
+    TextJustification -> 1., MenuSortingValue -> 1232, MenuCommandKey -> None,
+     FontSize -> 14, FontColor -> GrayLevel[0]], 
+   Cell[
+    StyleData["Image"], CellMargins -> {{Inherited, Inherited}, {0, 5}}, 
+    StyleKeyMapping -> {"Tab" -> "Image Caption"}, TextAlignment -> Center, 
+    CounterIncrements -> "Image", MenuSortingValue -> 1300, MenuCommandKey -> 
+    "i"], 
+   Cell[
+    StyleData["Image Caption"], 
+    CellMargins -> {{Inherited, Inherited}, {5, 2.5}}, 
+    StyleKeyMapping -> {"Backspace" -> "image"}, TextAlignment -> Center, 
+    MenuSortingValue -> 1320, FontSize -> 13, FontSlant -> "Italic", 
+    FontColor -> GrayLevel[0.117647]], 
+   Cell[
+    StyleData["Equation"], CellMargins -> {{100, 100}, {6, 6}}, 
+    StyleKeyMapping -> {"Tab" -> "Equation - numbered"}, TextAlignment -> 
+    Center, TextJustification -> 1., MenuSortingValue -> 1350, MenuCommandKey -> 
+    "e", FontSize -> 14], 
+   Cell[
+    StyleData["EquationNumbered"], CellMargins -> {{100, 7}, {6, 6}}, 
+    StyleKeyMapping -> {"BackSpace" -> "Equation"}, CellFrameLabels -> {{None, 
+       Cell[
+        TextData[{
+         "\[CapitalEpsilon]\[Xi]\:03af\[Sigma]\[Omega]\[Sigma]\[Eta] ", 
+          CounterBox["Chapter - numbered"], ".", 
+          CounterBox["EquationNumbered"]}], FontWeight -> "Bold", FontSlant -> 
+        "Italic"]}, {None, None}}, TextAlignment -> Center, TextJustification -> 
+    1., CounterIncrements -> "EquationNumbered", MenuSortingValue -> 1355, 
+    MenuCommandKey -> None, FontSize -> 14], 
+   Cell[
+    StyleData["Code"], CellMargins -> {{50, 50}, {8, 8}}, Evaluatable -> 
+    False, StripStyleOnPaste -> True, InitializationCell -> False, 
+    TextAlignment -> Left, TextJustification -> 1., Hyphenation -> False, 
+    AutoQuoteCharacters -> {}, PasteAutoQuoteCharacters -> {}, 
+    LanguageCategory -> "Formula", MenuSortingValue -> 1350, MenuCommandKey -> 
+    "z", FontSize -> 14, Background -> GrayLevel[0.85]], 
+   Cell[
+    StyleData["Question"], CellDingbat -> Cell[
+      TextData[{"E ", 
+        CounterBox["Chapter"], ".", 
+        CounterBox["Question"], ":"}], FontWeight -> "Bold", FontSlant -> 
+      "Italic"], CellMargins -> {{70, 0}, {3, 5}}, TextJustification -> 1., 
+    CounterIncrements -> "Question", MenuSortingValue -> 700, MenuCommandKey -> 
+    "q", FontSize -> 14], 
+   Cell[
+    StyleData["Problem"], CellDingbat -> Cell[
+      TextData[{"A ", 
+        CounterBox["Chapter"], ".", 
+        CounterBox["Problem"], ":"}], FontWeight -> "Bold", FontSlant -> 
+      "Italic"], CellMargins -> {{72, 0}, {3, 5}}, TextJustification -> 1., 
+    CounterIncrements -> "Problem", 
+    CounterAssignments -> {{"ItemNumbered", 0}}, MenuSortingValue -> 710, 
+    MenuCommandKey -> "a", FontSize -> 14], 
+   Cell[
+    StyleData["result"], CellMargins -> {{200, Inherited}, {5, 2.5}}, 
+    TextAlignment -> Right, MenuSortingValue -> 750, MenuCommandKey -> "r", 
+    FontSize -> 13, FontSlant -> "Italic", FontColor -> GrayLevel[0.117647]], 
+   Cell[
+    StyleData["Input"], MenuSortingValue -> 2000, MenuCommandKey -> "9", 
+    FontSize -> 13], 
+   Cell[
+    StyleData["Output"], TextAlignment -> Center, MenuSortingValue -> 2050, 
+    FontSize -> 13], 
+   Cell[
+    CellGroupData[{
+      Cell[
+       StyleData["Title"], CellMargins -> {{12, 12}, {10, 50}}, 
+       PageBreakBelow -> False, TextAlignment -> Center, 
+       LineSpacing -> {1, 2}, MenuSortingValue -> 2500, MenuCommandKey -> 
+       None, FontSize -> 32, FontWeight -> "Bold", FontColor -> 
+       RGBColor[0, 0, 0]], 
+      Cell[
+       StyleData["Title", "Printout"], CellMargins -> {{12, 12}, {10, 180}}, 
+       PageBreakBelow -> False, TextAlignment -> Center, 
+       LineSpacing -> {1, 2}, MenuSortingValue -> 2500, MenuCommandKey -> 
+       None, FontSize -> 32, FontWeight -> "Bold", FontColor -> 
+       RGBColor[0, 0, 0]]}, Closed]], 
+   Cell[
+    CellGroupData[{
+      Cell[
+       StyleData["Author"], CellMargins -> {{54, 54}, {3, 20}}, TextAlignment -> 
+       Center, ParagraphSpacing -> {0, 0}, MenuSortingValue -> 2600, FontSize -> 
+       14, FontWeight -> "Bold", FontColor -> RGBColor[0, 0, 0.500008]], 
+      Cell[
+       StyleData["Author", "Printout"], CellMargins -> {{54, 54}, {3, 80}}, 
+       TextAlignment -> Center, ParagraphSpacing -> {0, 0}, MenuSortingValue -> 
+       2600, FontSize -> 14, FontWeight -> "Bold", FontColor -> 
+       RGBColor[0, 0, 0.500008]]}, Closed]], 
+   Cell[
+    StyleData["Author Info"], CellMargins -> {{54, 54}, {3, 0}}, 
+    TextAlignment -> Center, ParagraphSpacing -> {0, 0}, MenuSortingValue -> 
+    2605, FontSize -> 13, FontWeight -> "Bold", FontColor -> 
+    RGBColor[0, 0, 0.500008]], 
+   Cell[
+    StyleData["Institution"], CellMargins -> {{54, 54}, {10, 0}}, 
+    TextAlignment -> Center, CounterIncrements -> "Institution", 
+    MenuSortingValue -> 2610, FontColor -> RGBColor[0, 0, 0.500008]], 
+   Cell["", "Text", CellFrame -> {{0, 0}, {0, 5}}, 
+    CellChangeTimes -> {{3.6406975592193623`*^9, 3.6406975603143635`*^9}}, 
+    FontSize -> 1], 
+   Cell[
+    StyleData["Subtitle"], MenuSortingValue -> None, MenuCommandKey -> None], 
+   Cell[
+    StyleData["Subsubtitle"], MenuSortingValue -> None, MenuCommandKey -> 
+    None], 
+   Cell[
+    StyleData["Section"], MenuSortingValue -> None, MenuCommandKey -> None], 
+   Cell[
+    StyleData["Subsection"], MenuSortingValue -> None, MenuCommandKey -> 
+    None], 
+   Cell[
+    StyleData["Subsubsection"], MenuSortingValue -> None, MenuCommandKey -> 
+    None], 
+   Cell[
+    StyleData["InlineFormula"], MenuSortingValue -> None, MenuCommandKey -> 
+    None], 
+   Cell[
+    StyleData["DisplayFormula"], 
+    CellChangeTimes -> {3.6087778716139154`*^9, 3.6115877881497126`*^9}, 
+    MenuSortingValue -> None, MenuCommandKey -> None], 
+   Cell[
+    StyleData["DisplayFormulaNumbered"], CellFrameLabels -> {{None, 
+       Cell[
+        TextData[{"(eq", 
+          CounterBox["DisplayFormulaNumbered"], ")"}], 
+        "DisplayFormulaEquationNumber"]}, {None, None}}, MenuSortingValue -> 
+    None, MenuCommandKey -> None], 
+   Cell[
+    StyleData["Program"], MenuSortingValue -> None, MenuCommandKey -> None], 
+   Cell[
+    StyleData["table"], 
+    CellMargins -> {{Inherited, Inherited}, {Inherited, Inherited}}, 
+    TextAlignment -> Center, MenuSortingValue -> None, MenuCommandKey -> None,
+     FontSize -> 14], 
+   Cell[
+    StyleData["Subchapter"], MenuSortingValue -> None, MenuCommandKey -> 
+    None], 
+   Cell[
+    StyleData["Program"], CellFrame -> {{0, 0}, {0.5, 0.5}}, 
+    CellMargins -> {{66, 10}, {8, 8}}, StripStyleOnPaste -> True, Hyphenation -> 
+    False, AutoQuoteCharacters -> {}, PasteAutoQuoteCharacters -> {}, 
+    LanguageCategory -> "Formula", ScriptLevel -> 1, MenuSortingValue -> None,
+     MenuCommandKey -> None, FontFamily -> "Courier"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "11.0 for Microsoft Windows (64-bit) (September 21, 2016)", 
+  StyleDefinitions -> "PrivateStylesheetFormatting.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 242, 3, 54, "ChapterNC"],
+Cell[825, 27, 353, 4, 19, "Text"],
+Cell[1181, 33, 1040, 33, 51, "Equation"],
+Cell[2224, 68, 124, 1, 30, "Equation"],
+Cell[2351, 71, 1623, 33, 57, "Text"],
+Cell[3977, 106, 2510, 76, 58, "Text"],
+Cell[6490, 184, 562, 17, 33, "Equation"],
+Cell[CellGroupData[{
+Cell[7077, 205, 8112, 181, 550, "Input"],
+Cell[15192, 388, 933, 16, 47, "Output"],
+Cell[16128, 406, 831, 15, 31, "Output"]
+}, Open  ]],
+Cell[16974, 424, 44, 1, 1, "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17055, 430, 164, 2, 54, "ChapterNC"],
+Cell[17222, 434, 353, 4, 19, "Text"],
+Cell[17578, 440, 967, 29, 53, "Equation"],
+Cell[18548, 471, 124, 1, 30, "Equation"],
+Cell[18675, 474, 944, 20, 19, "Text"],
+Cell[19622, 496, 539, 15, 53, "Equation"],
+Cell[20164, 513, 350, 4, 19, "ItemParagraph"],
+Cell[20517, 519, 965, 26, 89, "Equation"],
+Cell[CellGroupData[{
+Cell[21507, 549, 8206, 175, 664, "Input"],
+Cell[29716, 726, 835, 14, 47, "Output"],
+Cell[30554, 742, 885, 16, 31, "Output"]
+}, Open  ]],
+Cell[31454, 761, 44, 1, 1, "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31535, 767, 166, 2, 54, "ChapterNC"],
+Cell[31704, 771, 612, 9, 19, "Text"],
+Cell[32319, 782, 1014, 30, 37, "Equation"],
+Cell[33336, 814, 124, 1, 30, "Equation"],
+Cell[33463, 817, 1097, 19, 38, "Text"],
+Cell[CellGroupData[{
+Cell[34585, 840, 8096, 165, 523, "Input"],
+Cell[42684, 1007, 1595, 25, 70, "Output"],
+Cell[44282, 1034, 779, 14, 31, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

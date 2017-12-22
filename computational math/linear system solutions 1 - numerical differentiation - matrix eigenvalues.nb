@@ -1,0 +1,2195 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     96618,       2187]
+NotebookOptionsPosition[     94503,       2113]
+NotebookOutlinePosition[     95158,       2137]
+CellTagsIndexPosition[     95115,       2134]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\:0386\[Sigma]\[Kappa]\[Eta]\[Sigma]\[Eta] 1", "ChapterNC",
+ CellChangeTimes->{{3.6580755337615604`*^9, 3.6580755381736636`*^9}}],
+
+Cell["Represent the linear system", "Text",
+ CellChangeTimes->{{3.659726108483796*^9, 3.659726135702712*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "1"], "-", 
+     SubscriptBox["x", "2"], "+", 
+     RowBox[{"2", 
+      SubscriptBox["x", "3"]}], "-", 
+     SubscriptBox["x", "4"]}], "=", 
+    RowBox[{"-", "8"}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"2", 
+      SubscriptBox["x", "1"]}], "-", 
+     RowBox[{"2", 
+      SubscriptBox["x", "2"]}], "+", 
+     RowBox[{"3", 
+      SubscriptBox["x", "3"]}], "-", 
+     SubscriptBox["x", "4"]}], "=", 
+    RowBox[{"-", "20"}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "1"], "+", 
+     SubscriptBox["x", "2"], "+", 
+     SubscriptBox["x", "3"]}], "=", 
+    RowBox[{"-", "2"}]}], TraditionalForm]]],
+ "\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["x", "1"], "-", 
+     SubscriptBox["x", "2"], "+", 
+     RowBox[{"4", 
+      SubscriptBox["x", "3"]}], "+", 
+     RowBox[{"3", 
+      SubscriptBox["x", "4"]}]}], "=", "4"}], TraditionalForm]]]
+}], "Equation",
+ CellChangeTimes->{{3.6597261392505884`*^9, 3.659726242474992*^9}}],
+
+Cell["\<\
+as an augmented matrix and use Gaussian Elimination to find its solution.\
+\>", "Text",
+ CellChangeTimes->{{3.659726246345113*^9, 3.659726261627758*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\[CapitalLambda]\:03cd\[Sigma]\[Eta]", "Titlos",
+ CellChangeTimes->{{3.6597248865509367`*^9, 3.659724898699006*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[CurlyEpsilon]\[Pi]\[Alpha]\[Upsilon]\[Xi]\[Eta]\[Mu]\:03ad\[Nu]\
+\[Omicron]", " ", "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+    "\[Tau]\[Omicron]\[Upsilon]", " ", 
+    "\[Sigma]\[Upsilon]\[Sigma]\[Tau]\:03ae\[Mu]\[Alpha]\[Tau]\[Omicron]\
+\[FinalSigma]"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"A", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"1", ",", 
+        RowBox[{"-", "1"}], ",", "2", ",", 
+        RowBox[{"-", "1"}], ",", 
+        RowBox[{"-", "8"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", 
+        RowBox[{"-", "2"}], ",", "3", ",", 
+        RowBox[{"-", "3"}], ",", 
+        RowBox[{"-", "20"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "1", ",", "1", ",", "0", ",", 
+        RowBox[{"-", "2"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", 
+        RowBox[{"-", "1"}], ",", "4", ",", "3", ",", "4"}], "}"}]}], "}"}]}], 
+   ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", 
+    "\[Beta]\[Omicron]\[Eta]\[Theta]\[Eta]\[Tau]\[Iota]\[Kappa]\:03ae", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]", " ", 
+    "\[Pi]\[Omicron]\[Upsilon]", " ", 
+    "\[Delta]\[Iota]\[Alpha]\[Gamma]\[Omega]\[Nu]\[Iota]\[Omicron]\[Pi]\
+\[Omicron]\[Iota]\[CurlyEpsilon]\:03af", " ", "\:03ad\[Nu]\[Alpha]\[Nu]", " ", 
+    RowBox[{"\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", "."}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"lowerZeroDiagonal", "[", "table_List", "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "H", " ", 
+        "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]", " ", 
+        "lowerDiagonal", " ", 
+        "\[Pi]\[Alpha]\:03af\[Rho]\[Nu]\[CurlyEpsilon]\[Iota]", " ", 
+        "\:03ad\[Nu]\[Alpha]\[Nu]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", "m", "\[Times]", "n",
+         " ", 
+        RowBox[{"(", 
+         RowBox[{"m", "\[GreaterEqual]", "n"}], ")"}], " ", 
+        "\[Kappa]\[Alpha]\[Iota]", " ", 
+        "\[Mu]\[Eta]\[Delta]\[CurlyEpsilon]\[Nu]\:03af\[Zeta]\[CurlyEpsilon]\
+\[Iota]", " ", "\[Tau]\[Alpha]", " ", 
+        "\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[CurlyEpsilon]\:03af\[Alpha]", 
+        " ", "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        "\[Beta]\[Rho]\:03af\[Sigma]\[Kappa]\[Omicron]\[Nu]\[Tau]\[Alpha]\
+\[Iota]", " ", "\[Kappa]\:03ac\[Tau]\[Omega]", " ", "\[Alpha]\[Pi]\:03cc", 
+        " ", "\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Delta]\[Iota]\[Alpha]\[Gamma]\:03ce\[Nu]\[Iota]\[Omicron]"}], ",", 
+       " ", 
+       RowBox[{
+       "\[Alpha]\[Lambda]\[Lambda]\:03ac\[Zeta]\[Omicron]\[Nu]\[Tau]\[Alpha]\
+\[FinalSigma]", " ", "\:03cc\[Mu]\[Omega]\[FinalSigma]", " ", 
+        "\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Sigma]\[CurlyEpsilon]\[Iota]\[Rho]\:03ac", " ", 
+        "\[Tau]\[Omega]\[Nu]", " ", 
+        "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ce\[Nu]", " ", 
+        "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]", " ", 
+        "\[Pi]\:03ac\[Nu]\[Tau]\[Omicron]\[Tau]\[CurlyEpsilon]", " ", 
+        "\[Tau]\[Omicron]", " ", "1", "\[Omicron]", " ", 
+        "\[Delta]\[Iota]\[Alpha]\[Gamma]\:03ce\[Nu]\[Iota]\[Omicron]", " ", 
+        "\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[CurlyEpsilon]\:03af\[Omicron]\
+", " ", "\:03cc\[Pi]\[Omega]\[FinalSigma]", " ", 
+        "\[Pi]\[Rho]\[Omicron]\[Chi]\[Omega]\[Rho]\:03ac\[Mu]\[CurlyEpsilon]",
+         " ", "\[Nu]\[Alpha]", " ", 
+        "\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota]", " ", "\[Tau]\[Omicron]", 
+        " ", 
+        RowBox[{
+        "\[Mu]\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\
+\[CurlyEpsilon]\[Rho]\[Omicron]", ".", "\[IndentingNewLine]", 
+         "\[CapitalDelta]\:03af\[Nu]\[CurlyEpsilon]\[Iota]"}], " ", 
+        "\[Sigma]\[Alpha]\[Nu]", " ", 
+        "\[Alpha]\[Pi]\[Omicron]\[Tau]\:03ad\[Lambda]\[CurlyEpsilon]\[Sigma]\
+\[Mu]\[Alpha]", " ", "\[Tau]\[Omicron]\[Nu]", " ", "\[Nu]\:03ad\[Omicron]", 
+        " ", "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[Kappa]\[Alpha]\[Theta]\:03ce\[FinalSigma]", " ", 
+        "\[Kappa]\[Alpha]\[Iota]", " ", "\:03ad\[Nu]\[Alpha]\[Nu]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\[CurlyEpsilon]\[Rho]\[Iota]\:03ad\[Chi]\[CurlyEpsilon]\[Iota]",
+         " ", "\[Tau]\[Iota]\[FinalSigma]", " ", 
+        "\[Alpha]\[Lambda]\[Lambda]\[Alpha]\[Gamma]\:03ad\[FinalSigma]", " ", 
+        "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        "\[Gamma]\:03af\[Nu]\[Alpha]\[Nu]\[CurlyEpsilon]", " ", 
+        "\[Sigma]\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Sigma]\[CurlyEpsilon]\[Iota]\[Rho]\:03ac", " ", 
+        "\[Tau]\[Omega]\[Nu]", " ", 
+        RowBox[{"\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ce\[Nu]", "."}]}]}], " ",
+       "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"i", ",", 
+        RowBox[{"len", "=", 
+         RowBox[{"Length", "[", "table", "]"}]}], ",", "column", ",", 
+        "maxPos", ",", "max", ",", "j", ",", 
+        RowBox[{"A", "=", "table"}], ",", "temp", ",", "k", ",", "line", ",", 
+        "checkList", ",", "remainingLines", ",", "emptyPos"}], 
+       "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"checkList", "=", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"0", ",", "len"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "\[LessEqual]", 
+          RowBox[{"len", "-", "1"}]}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"(*", " ", 
+          RowBox[{
+          "\[Tau]\[Alpha]\[Xi]\[Iota]\[Nu]\:03cc\[Mu]\[Eta]\[Sigma]\[Eta]", 
+           " ", "\:03ad\[Tau]\[Sigma]\[Iota]", " ", 
+           "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]", " ", "\[Tau]\[Omicron]", 
+           " ", "1", "\[Omicron]", " ", 
+           "\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[CurlyEpsilon]\:03af\
+\[Omicron]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+           "\[Delta]\[Iota]\[Alpha]\[Gamma]\[Omega]\[Nu]\:03af\[Omicron]\
+\[Upsilon]", " ", "\[Kappa]\:03ac\[Theta]\[CurlyEpsilon]", " ", 
+           "\[CurlyPhi]\[Omicron]\[Rho]\:03ac", " ", "\[Nu]\[Alpha]", " ", 
+           "\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota]", " ", 
+           "\[Tau]\[Omicron]", " ", 
+           "\[Mu]\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\
+\[CurlyEpsilon]\[Rho]\[Omicron]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+           "\[Alpha]\[Nu]\[Tau]\:03af\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\
+\[Eta]\[FinalSigma]", " ", "\[Sigma]\[Tau]\:03ae\[Lambda]\[Eta]\[FinalSigma]",
+            " ", 
+           RowBox[{"\[Alpha]\[Pi]\:03cc", " ", "'"}], 
+           "\[Kappa]\[CurlyEpsilon]\[Iota]", " ", "\[Kappa]\[Alpha]\[Iota]", 
+           " ", "\[Kappa]\:03ac\[Tau]\[Omega]"}], " ", "*)"}], 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"column", "=", 
+           RowBox[{"Abs", "@", 
+            RowBox[{"A", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ";;", 
+               RowBox[{"-", "2"}]}], "]"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"max", "=", 
+           RowBox[{"Max", "[", "column", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"maxPos", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"column", ",", "max"}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", "column", "]"}], ">", "1"}], "&&", 
+             RowBox[{
+              RowBox[{"A", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "i"}], "]"}], "]"}], "\[NotEqual]", 
+              "max"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"(*", " ", 
+             RowBox[{
+             "\[Alpha]\[Nu]\[Tau]\[Alpha]\[Lambda]\[Lambda]\[Alpha]\[Gamma]\
+\:03ae", " ", "\[Tau]\[Omega]\[Nu]", " ", 
+              "\[Sigma]\[CurlyEpsilon]\[Iota]\[Rho]\:03ce\[Nu]"}], " ", 
+             "*)"}], "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"temp", "=", 
+              RowBox[{"A", "[", 
+               RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"A", "[", 
+               RowBox[{"[", "i", "]"}], "]"}], "=", 
+              RowBox[{"A", "[", 
+               RowBox[{"[", 
+                RowBox[{"maxPos", "+", "i", "-", "1"}], "]"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"A", "[", 
+               RowBox[{"[", 
+                RowBox[{"maxPos", "+", "i", "-", "1"}], "]"}], "]"}], "=", 
+              "temp"}], ";"}]}], "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{
+            "\[Alpha]\[Pi]\[Omicron]\[Theta]\:03ae\[Kappa]\[CurlyEpsilon]\
+\[Upsilon]\[Sigma]\[Eta]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+             "\[Alpha]\[Lambda]\[Lambda]\[Alpha]\[Gamma]\:03ae\[FinalSigma]"}]\
+, " ", "*)"}], "\[IndentingNewLine]", 
+           RowBox[{"(*", 
+            RowBox[{"AppendTo", "[", 
+             RowBox[{"swaps", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"maxPos", "+", "i", "-", "1"}], ",", "i"}], "}"}]}], 
+             "]"}], "*)"}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           
+           "\[Delta]\[Eta]\[Mu]\[Iota]\[Omicron]\[Upsilon]\[Rho]\[Gamma]\:03af\
+\[Alpha]", " ", "\[Lambda]\:03af\[Sigma]\[Tau]\[Alpha]\[FinalSigma]", " ", 
+            "\[Tau]\[Omega]\[Nu]", " ", 
+            "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Iota]\[Pi]\:03cc\
+\[Mu]\[CurlyEpsilon]\[Nu]\[Omega]\[Nu]", " ", 
+            "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ce\[Nu]", " ", 
+            "\[Gamma]\[Iota]\[Alpha]", " ", 
+            "\[CurlyEpsilon]\[Lambda]\:03ad\[Gamma]\[Chi]\[Omicron]\[Upsilon]\
+\[FinalSigma]"}], " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"remainingLines", "=", 
+           RowBox[{"A", "[", 
+            RowBox[{"[", 
+             RowBox[{"Table", "[", 
+              RowBox[{"n", ",", 
+               RowBox[{"{", 
+                RowBox[{"n", ",", 
+                 RowBox[{"i", "+", "1"}], ",", "len"}], "}"}]}], "]"}], "]"}],
+             "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+            RowBox[{
+            "\:03ad\[Lambda]\[CurlyEpsilon]\[Gamma]\[Chi]\[Omicron]\
+\[FinalSigma]", " ", "\[Gamma]\[Iota]\[Alpha]", " ", 
+             "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\[Iota]\[Kappa]\:03ac", " ", 
+             "\[CurlyEpsilon]\[Xi]\[Alpha]\[Rho]\[Tau]\[Eta]\[Mu]\:03ad\[Nu]\
+\[CurlyEpsilon]\[FinalSigma]", " ", 
+             "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ad\[FinalSigma]"}], " ", 
+            "-", " ", 
+            RowBox[{
+            "\[Theta]\[Alpha]", " ", 
+             "\:03ad\[Chi]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+             "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ad\[FinalSigma]", " ", 
+             "\[Mu]\[CurlyEpsilon]", " ", 
+             "\[Mu]\[Eta]\[Delta]\[CurlyEpsilon]\[Nu]\[Iota]\[Kappa]\:03ac", 
+             " ", "\[Delta]\[Eta]\[Lambda]\[Alpha]\[Delta]\:03ae"}]}], " ", 
+           "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"remainingLines", "\[Equal]", 
+             RowBox[{"Table", "[", 
+              RowBox[{"checkList", ",", 
+               RowBox[{"{", 
+                RowBox[{"Length", "[", "remainingLines", "]"}], "}"}]}], 
+              "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Break", "[", "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+            RowBox[{
+            "\:03ad\[Lambda]\[CurlyEpsilon]\[Gamma]\[Chi]\[Nu]\[Omicron]\
+\[FinalSigma]", " ", "\[Gamma]\[Iota]\[Alpha]", " ", 
+             "\[Mu]\[Eta]\[Delta]\[CurlyEpsilon]\[Nu]\[Iota]\[Kappa]\:03ad\
+\[FinalSigma]", " ", "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ad\[FinalSigma]", 
+             " ", "\[Sigma]\[Tau]\[Eta]\[Nu]", " ", 
+             "\[Tau]\[Rho]\:03ad\[Chi]\[Omicron]\[Upsilon]\[Sigma]\[Alpha]", 
+             " ", "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ae"}], ",", " ", 
+            RowBox[{
+            "\[Kappa]\[Alpha]\[Iota]", " ", "\[Alpha]\[Nu]", " ", 
+             "\[Upsilon]\[Pi]\:03ac\[Rho]\[Chi]\[CurlyEpsilon]\[Iota]", " ", 
+             "\[Mu]\[CurlyEpsilon]\[Tau]\[Alpha]\[Tau]\:03cc\[Pi]\[Iota]\
+\[Sigma]\[Eta]"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"MemberQ", "[", 
+             RowBox[{
+              RowBox[{"remainingLines", "[", 
+               RowBox[{"[", 
+                RowBox[{"All", ",", 
+                 RowBox[{"1", ";;", "len"}]}], "]"}], "]"}], ",", 
+              "checkList"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"emptyPos", "=", 
+              RowBox[{
+               RowBox[{"Position", "[", 
+                RowBox[{
+                 RowBox[{"remainingLines", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"All", ",", 
+                    RowBox[{"1", ";;", "len"}]}], "]"}], "]"}], ",", 
+                 "checkList"}], "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"temp", "=", 
+              RowBox[{"A", "[", 
+               RowBox[{"[", 
+                RowBox[{"emptyPos", "+", "i"}], "]"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"A", "[", 
+               RowBox[{"[", 
+                RowBox[{"emptyPos", "+", "i"}], "]"}], "]"}], "=", 
+              RowBox[{"A", "[", 
+               RowBox[{"[", "len", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"A", "[", 
+               RowBox[{"[", "len", "]"}], "]"}], "=", "temp"}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"swaps", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"emptyPos", "+", "i"}], ",", "len"}], "}"}]}], 
+              "]"}]}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "\[Mu]\[Eta]\[Delta]\[CurlyEpsilon]\[Nu]\[Iota]\[Sigma]\[Mu]\:03cc\
+\[FinalSigma]", " ", "\[Tau]\[Omega]\[Nu]", " ", 
+            "\[Sigma]\[Upsilon]\[Nu]\[Tau]\[CurlyEpsilon]\[Lambda]\
+\[CurlyEpsilon]\[Sigma]\[Tau]\:03ce\[Nu]", " ", "\[Alpha]\[Pi]\:03cc", " ", 
+            "\[Tau]\[Eta]\[Nu]", " ", 
+            "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ae", " ", 
+            "\[Pi]\[Omicron]\[Upsilon]", " ", 
+            "\[CurlyEpsilon]\:03af\[Mu]\[Alpha]\[Sigma]\[Tau]\[CurlyEpsilon]",
+             " ", "\[Kappa]\[Alpha]\[Iota]", " ", 
+            "\[Pi]\[Rho]\[Omicron]\[FinalSigma]", " ", "\[Tau]\[Alpha]", " ", 
+            "\[Kappa]\:03ac\[Tau]\[Omega]"}], " ", "*)"}], 
+          "\[IndentingNewLine]", 
+          RowBox[{"For", "[", 
+           RowBox[{
+            RowBox[{"k", "=", 
+             RowBox[{"i", "+", "1"}]}], ",", 
+            RowBox[{"k", "\[LessEqual]", "len"}], ",", 
+            RowBox[{"k", "++"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"line", "=", 
+              RowBox[{
+               RowBox[{"A", "[", 
+                RowBox[{"[", "i", "]"}], "]"}], "*", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"A", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"k", ",", "i"}], "]"}], "]"}], "/", 
+                 RowBox[{"A", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "i"}], "]"}], "]"}]}], ")"}]}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"A", "[", 
+               RowBox[{"[", "k", "]"}], "]"}], "=", 
+              RowBox[{
+               RowBox[{"A", "[", 
+                RowBox[{"[", "k", "]"}], "]"}], "-", "line"}]}]}]}], 
+           "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
+        "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[CurlyEpsilon]\[Xi]\[Alpha]\[Gamma]\[Omega]\[Gamma]\:03ae", " ", 
+         "\[Tau]\[Omega]\[Nu]", " ", 
+         "\[Alpha]\[Pi]\[Omicron]\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\
+\[Sigma]\[Mu]\:03ac\[Tau]\[Omega]\[Nu]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{"{", 
+         RowBox[{"A", ",", "swaps"}], "}"}], "*)"}], "\[IndentingNewLine]", 
+       "A"}]}], "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]", " ", 
+    "\[Gamma]\[Iota]\[Alpha]", " ", "\[Tau]\[Eta]", " ", 
+    "\[Lambda]\:03cd\[Sigma]\[Eta]", " ", 
+    RowBox[{
+    "\[Sigma]\[Upsilon]\[Sigma]\[Tau]\:03ae\[Mu]\[Alpha]\[Tau]\[Omicron]\
+\[FinalSigma]", "."}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"systemSolveGauss", "[", "table_", "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "\[CapitalEta]", " ", "systemSolveGauss", " ", 
+        "\[Pi]\[Alpha]\:03af\[Rho]\[Nu]\[CurlyEpsilon]\[Iota]", " ", 
+        "\[Sigma]\[Alpha]\[Nu]", " ", 
+        "\:03cc\[Rho]\[Iota]\[Sigma]\[Mu]\[Alpha]", " ", 
+        "\[Tau]\[Omicron]\[Nu]", " ", 
+        "\[Pi]\[Rho]\[Omicron]\[Sigma]\[Alpha]\[Upsilon]\[Xi]\[Eta]\[Mu]\:03ad\
+\[Nu]\[Omicron]", " ", "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[CurlyEpsilon]\[Nu]\:03cc\[FinalSigma]", " ", 
+        "\[Sigma]\[Upsilon]\[Sigma]\[Tau]\:03ae\[Mu]\[Alpha]\[Tau]\[Omicron]\
+\[FinalSigma]", " ", "n", " ", 
+        "\[CurlyEpsilon]\[Xi]\[Iota]\[Sigma]\:03ce\[Sigma]\[CurlyEpsilon]\
+\[Omega]\[Nu]", " ", "\[Mu]\[CurlyEpsilon]", " ", "n", " ", 
+        "\[Alpha]\[Gamma]\[Nu]\:03ce\[Sigma]\[Tau]\[Omicron]\[Upsilon]\
+\[FinalSigma]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+        "\[Mu]\[Omicron]\[Rho]\[CurlyPhi]\:03ae\[FinalSigma]", " ", 
+        RowBox[{"A", "\[CenterDot]", "x"}]}], " ", "=", " ", 
+       RowBox[{"b", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"epau", "=", "table"}], ",", "A", ",", "bs", ",", "xs", ",", 
+        RowBox[{"len", "=", 
+         RowBox[{"Length", "[", "table", "]"}]}], ",", "i", ",", "j", ",", 
+        "k", ",", "sol"}], "\[IndentingNewLine]", "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ClearAll", "[", "x", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[Delta]\[Eta]\[Mu]\[Iota]\[Omicron]\[Upsilon]\[Rho]\[Gamma]\:03af\
+\[Alpha]", " ", "\[Lambda]\:03af\[Sigma]\[Tau]\[Alpha]\[FinalSigma]", " ", 
+         "\[Mu]\[CurlyEpsilon]\[Tau]\[Alpha]\[Beta]\[Lambda]\[Eta]\[Tau]\:03ce\
+\[Nu]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"xs", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"x", "[", "i", "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "len"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[Mu]\[CurlyEpsilon]\[Tau]\[Alpha]\[Tau]\[Rho]\[Omicron]\[Pi]\:03ae",
+          " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+         "\[CurlyEpsilon]\[Pi]\[Alpha]\[Upsilon]\[Xi]\[Eta]\[Mu]\:03ad\[Nu]\
+\[Omicron]\[Upsilon]", " ", "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+         "\[Sigma]\[CurlyEpsilon]", " ", "\:03ac\[Nu]\[Omega]", " ", 
+         "\[Tau]\[Rho]\[Iota]\[Gamma]\[Omega]\[Nu]\[Iota]\[Kappa]\:03cc"}], 
+        " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"epau", "=", 
+        RowBox[{"lowerZeroDiagonal", "[", "table", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[CurlyEpsilon]\[Xi]\[Alpha]\[Gamma]\[Omega]\[Gamma]\:03ae", " ", 
+         "\[Tau]\[Omicron]\[Upsilon]", " ", 
+         "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+         "\[Sigma]\[Upsilon]\[Nu]\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\
+\[Sigma]\[Tau]\:03ce\[Nu]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"A", "=", 
+        RowBox[{"epau", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", 
+           RowBox[{"1", ";;", "len"}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[CurlyEpsilon]\[Xi]\[Alpha]\[Gamma]\[Omega]\[Gamma]\:03ae", " ", 
+         "\[Tau]\[Omega]\[Nu]", " ", 
+         "\[Delta]\[CurlyEpsilon]\[Xi]\[Iota]\:03ce\[Nu]", " ", 
+         "\[Mu]\[CurlyEpsilon]\[Lambda]\:03ce\[Nu]", " ", 
+         "\[Tau]\[Omega]\[Nu]", " ", 
+         "\[CurlyEpsilon]\[Xi]\[Iota]\[Sigma]\:03ce\[Sigma]\[CurlyEpsilon]\
+\[Omega]\[Nu]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"bs", "=", 
+        RowBox[{"epau", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", 
+           RowBox[{"-", "1"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[CurlyEpsilon]\:03cd\[Rho]\[CurlyEpsilon]\[Sigma]\[Eta]", " ", 
+         "\[Tau]\[Eta]\[FinalSigma]", " ", 
+         "\[Lambda]\:03cd\[Sigma]\[Eta]\[FinalSigma]"}], " ", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"sol", "=", 
+        RowBox[{"ConstantArray", "[", 
+         RowBox[{"Null", ",", "len"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"sol", "[", 
+         RowBox[{"[", "len", "]"}], "]"}], "=", 
+        FractionBox[
+         RowBox[{"bs", "[", 
+          RowBox[{"[", "len", "]"}], "]"}], 
+         RowBox[{"A", "[", 
+          RowBox[{"[", 
+           RowBox[{"len", ",", 
+            RowBox[{"-", "1"}]}], "]"}], "]"}]]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"j", "=", 
+          RowBox[{"len", "-", "1"}]}], ",", 
+         RowBox[{"j", "\[GreaterEqual]", "1"}], ",", 
+         RowBox[{"j", "--"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"sol", "[", 
+            RowBox[{"[", "j", "]"}], "]"}], "=", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"bs", "[", 
+              RowBox[{"[", "j", "]"}], "]"}], "-", 
+             RowBox[{"Sum", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"A", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"j", ",", "k"}], "]"}], "]"}], 
+                RowBox[{"sol", "[", 
+                 RowBox[{"[", "k", "]"}], "]"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"k", ",", 
+                 RowBox[{"j", "+", "1"}], ",", "len"}], "}"}]}], "]"}]}], 
+            RowBox[{"A", "[", 
+             RowBox[{"[", 
+              RowBox[{"j", ",", "j"}], "]"}], "]"}]]}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[Pi]\[Alpha]\[Rho]\[Omicron]\[Upsilon]\[Sigma]\:03af\[Alpha]\[Sigma]\
+\[Eta]", " ", "\[Tau]\[Omega]\[Nu]", " ", 
+         "\[Alpha]\[Pi]\[Omicron]\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\
+\[Sigma]\[Mu]\:03ac\[Tau]\[Omega]\[Nu]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"Apply", "[", 
+        RowBox[{"Rule", ",", 
+         RowBox[{"Transpose", "[", 
+          RowBox[{"{", 
+           RowBox[{"xs", ",", "sol"}], "}"}], "]"}], ",", 
+         RowBox[{"{", "1", "}"}]}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}],
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalUpsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]", " ", 
+    "\[Lambda]\:03cd\[Sigma]\[Eta]"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"sol", "=", 
+  RowBox[{"systemSolveGauss", "[", "A", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6599518319459724`*^9, 3.6599518416546216`*^9}, {
+  3.661786110717984*^9, 3.6617862127196846`*^9}, {3.6617864720526314`*^9, 
+  3.661786575320475*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"x", "[", "1", "]"}], "\[Rule]", 
+    RowBox[{"-", "7"}]}], ",", 
+   RowBox[{
+    RowBox[{"x", "[", "2", "]"}], "\[Rule]", "3"}], ",", 
+   RowBox[{
+    RowBox[{"x", "[", "3", "]"}], "\[Rule]", "2"}], ",", 
+   RowBox[{
+    RowBox[{"x", "[", "4", "]"}], "\[Rule]", "2"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6617865570286303`*^9, 3.6617865757112703`*^9}}]
+}, Open  ]],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0386\[Sigma]\[Kappa]\[Eta]\[Sigma]\[Eta] 2", "ChapterNC",
+ CellChangeTimes->{{3.658077457348184*^9, 3.658077461726974*^9}}],
+
+Cell[TextData[{
+ "Values for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{"x", " ", 
+     SuperscriptBox["\[ExponentialE]", "x"]}]}], TraditionalForm]]],
+ " are given in the following table."
+}], "Text",
+ CellChangeTimes->{{3.6597262736889224`*^9, 3.659726290422301*^9}}],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[GridBox[{
+    {
+     StyleBox["x",
+      FontWeight->"Bold"], 
+     StyleBox[
+      RowBox[{"f", "(", "x", ")"}],
+      FontWeight->"Bold"], 
+     StyleBox[
+      RowBox[{
+       RowBox[{"f", "'"}], 
+       RowBox[{"(", "x", ")"}]}],
+      FontWeight->"Bold"]},
+    {"1.8", "10.889365", "___"},
+    {"1.9", "12.703199", "___"},
+    {"2.0", "14.778112", "___"},
+    {"2.1", "17.148957", "___"},
+    {"2.2", "19.855030", "___"}
+   }], TraditionalForm]]]], "Equation",
+ CellChangeTimes->{{3.659726301578683*^9, 3.6597263487885914`*^9}, {
+  3.6597263954750314`*^9, 3.659726420339615*^9}, {3.6597264881928205`*^9, 
+  3.6597264972466726`*^9}}],
+
+Cell[TextData[{
+ "Use numerical differentiation (aim for errors of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"O", "(", 
+    SuperscriptBox["h", "2"], ")"}], TraditionalForm]]],
+ ") to complete the table and compare your results with the actual values."
+}], "Text",
+ CellChangeTimes->{{3.659726359981739*^9, 3.659726391949463*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\[CapitalLambda]\:03cd\[Sigma]\[Eta]", "Titlos",
+ CellChangeTimes->{{3.6597248865509367`*^9, 3.659724898699006*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalBeta]\:03ac\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ",
+     "\[Tau]\[Alpha]", " ", 
+    "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Alpha]", " ", 
+    "\[Sigma]\[CurlyEpsilon]", " ", "\[Mu]\:03af\[Alpha]", " ", 
+    RowBox[{"\[Lambda]\:03af\[Sigma]\[Tau]\[Alpha]", "."}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xs", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{"i", ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1.8", ",", "2.2", ",", "0.1"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ys", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "10.889365", ",", "12.703199", ",", "14.778112", ",", "17.148957", ",", 
+     "19.855030"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"points", "=", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"xs", ",", "ys"}], "}"}], "]"}]}], ";"}], "\[IndentingNewLine]",
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", 
+    "\[Beta]\[Omicron]\[Eta]\[Theta]\[Eta]\[Tau]\[Iota]\[Kappa]\:03ae", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]", " ", 
+    "\[Pi]\[Omicron]\[Upsilon]", " ", 
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[CurlyEpsilon]\[Iota]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Pi]\[Alpha]\[Rho]\:03ac\[Gamma]\[Omega]\[Gamma]\[Omicron]", " ", 
+    "\[Alpha]\[Pi]\:03cc", " ", "\[Mu]\:03af\[Alpha]", " ", 
+    "\[Lambda]\:03af\[Sigma]\[Tau]\[Alpha]", " ", 
+    "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omega]\[Nu]", " ", 
+    "\[Sigma]\[CurlyEpsilon]", " ", "\[Kappa]\:03ac\[Theta]\[CurlyEpsilon]", 
+    " ", 
+    RowBox[{"\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omicron]", "."}]}], 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"dInterpolation", "[", "points_List", "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "\[CapitalEta]", " ", "dInterpolation", " ", 
+        "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[CurlyEpsilon]\[Iota]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Pi]\[Alpha]\[Rho]\:03ac\[Gamma]\[Omega]\[Gamma]\[Omicron]", " ", 
+        "\[Sigma]\[CurlyEpsilon]", " ", 
+        "\[Kappa]\:03ac\[Theta]\[CurlyEpsilon]", " ", 
+        "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omicron]", " ", 
+        "\[Mu]\[Iota]\[Alpha]\[FinalSigma]", " ", 
+        "\[Lambda]\:03af\[Sigma]\[Tau]\[Alpha]\[FinalSigma]", " ", 
+        "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omega]\[Nu]", " ", 
+        "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]", " ", 
+        "\[Beta]\[Omicron]\:03ae\[Theta]\[CurlyEpsilon]\[Iota]\[Alpha]", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\[Omicron]\[Lambda]\[Upsilon]\[Omega]\[Nu]\:03cd\[Mu]\[Omicron]\
+\[Upsilon]", " ", 
+        "\[Pi]\[Alpha]\[Rho]\[CurlyEpsilon]\[Mu]\[Beta]\[Omicron]\[Lambda]\
+\:03ae\[FinalSigma]", " ", "\[Mu]\[CurlyEpsilon]", " ", 
+        "\[Alpha]\[Kappa]\[Rho]\:03af\[Beta]\[CurlyEpsilon]\[Iota]\[Alpha]", 
+        " ", "\[CapitalOmicron]", 
+        RowBox[{"(", 
+         SuperscriptBox["h", "2"], ")"}]}], ",", " ", 
+       RowBox[{
+       "\[Mu]\[CurlyEpsilon]", " ", 
+        "\[Delta]\[CurlyEpsilon]\[Delta]\[Omicron]\[Mu]\:03ad\[Nu]\[Omicron]",
+         " ", "\:03cc\[Tau]\[Iota]", " ", "\[Tau]\[Alpha]", " ", 
+        "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Alpha]", " ", 
+        "\[Iota]\[Sigma]\[Alpha]\[Pi]\:03ad\[Chi]\[Omicron]\[Upsilon]\[Nu]", 
+        " ", "\[Kappa]\[Alpha]\[Iota]", " ", "\[Omicron]", " ", 
+        "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc\[FinalSigma]", " ", 
+        "\[Tau]\[Omega]\[Nu]", " ", 
+        "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omega]\[Nu]", " ", 
+        "\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota]", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]\[Lambda]\:03ac\[Chi]\[Iota]\[Sigma]\[Tau]\
+\[Omicron]\[Nu]", " ", "3"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"h", "=", 
+         RowBox[{
+          RowBox[{"points", "[", 
+           RowBox[{"[", 
+            RowBox[{"2", ",", "1"}], "]"}], "]"}], "-", 
+          RowBox[{"points", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], ",", "i", ",", 
+        RowBox[{"len", "=", 
+         RowBox[{"Length", "[", "points", "]"}]}], ",", "\[IndentingNewLine]",
+         "dFirst", ",", "dLast", ",", "dMid"}], "\[IndentingNewLine]", "}"}], 
+      ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+        "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\
+\[Mu]\:03cc\[FinalSigma]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+         "\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Omicron]\
+\[Upsilon]", " ", "\[Sigma]\[Tau]\[Omicron]", " ", 
+         "\[Pi]\[Rho]\:03ce\[Tau]\[Omicron]", " ", 
+         "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omicron]"}], ",", " ", 
+        RowBox[{
+        "\[Mu]\[CurlyEpsilon]", " ", "\[Chi]\[Rho]\:03ae\[Sigma]\[Eta]", " ", 
+         "\[Tau]\[Omicron]\[Upsilon]", " ", 
+         "\[Pi]\[Omicron]\[Lambda]\[Upsilon]\[Omega]\[Nu]\:03cd\[Mu]\[Omicron]\
+\[Upsilon]", " ", "Newton", " ", "\[Pi]\[Rho]\[Omicron]\[FinalSigma]", " ", 
+         "\[Tau]\[Alpha]", " ", "\[Mu]\[Pi]\[Rho]\[Omicron]\[FinalSigma]"}]}],
+        " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"dFirst", "=", 
+        FractionBox[
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "3"}], 
+           RowBox[{"points", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "+", 
+          RowBox[{"4", 
+           RowBox[{"points", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "2"}], "]"}], "]"}]}], "-", 
+          RowBox[{"points", "[", 
+           RowBox[{"[", 
+            RowBox[{"3", ",", "2"}], "]"}], "]"}]}], 
+         RowBox[{"2", "h"}]]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{
+         "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\
+\[Mu]\:03cc\[FinalSigma]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+          "\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Omicron]\
+\[Upsilon]", " ", "\[Sigma]\[Tau]\[Omicron]", " ", 
+          "\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\[Upsilon]\[Tau]\
+\[Alpha]\:03af\[Omicron]", " ", 
+          "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omicron]"}], ",", " ", 
+         RowBox[{
+         "\[Mu]\[CurlyEpsilon]", " ", "\[Chi]\[Rho]\:03ae\[Sigma]\[Eta]", " ",
+           "\[Tau]\[Omicron]\[Upsilon]", " ", 
+          "\[Pi]\[Omicron]\[Lambda]\[Upsilon]\[Omega]\[Nu]\:03cd\[Mu]\
+\[Omicron]\[Upsilon]", " ", "Newton", " ", 
+          "\[Pi]\[Rho]\[Omicron]\[FinalSigma]", " ", "\[Tau]\[Alpha]", " ", 
+          "\[Pi]\:03af\[Sigma]\[Omega]"}]}], " ", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"dLast", "=", 
+        FractionBox[
+         RowBox[{
+          RowBox[{"3", 
+           RowBox[{"points", "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"-", "1"}], ",", "2"}], "]"}], "]"}]}], "-", 
+          RowBox[{"4", 
+           RowBox[{"points", "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"-", "2"}], ",", "2"}], "]"}], "]"}]}], "+", 
+          RowBox[{"points", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"-", "3"}], ",", "2"}], "]"}], "]"}]}], 
+         RowBox[{"2", "h"}]]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\
+\[Mu]\:03cc\[FinalSigma]", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+         "\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Omicron]\
+\[Upsilon]", " ", "\[Sigma]\[Tau]\[Alpha]", " ", 
+         "\[CurlyEpsilon]\[Nu]\[Delta]\[Iota]\:03ac\[Mu]\[CurlyEpsilon]\
+\[Sigma]\[Alpha]", " ", "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Alpha]", 
+         " ", "\[Mu]\[CurlyEpsilon]", " ", "\[Chi]\[Rho]\:03ae\[Sigma]\[Eta]",
+          " ", "\[Tau]\[Omega]\[Nu]", " ", 
+         "\[Kappa]\[CurlyEpsilon]\[Nu]\[Tau]\[Rho]\[Iota]\[Kappa]\:03ce\[Nu]",
+          " ", "\[Delta]\[Iota]\[Alpha]\[CurlyPhi]\[Omicron]\[Rho]\:03ce\[Nu]\
+"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"dMid", "=", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"Last", "[", 
+          RowBox[{"Reap", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"For", "[", 
+             RowBox[{
+              RowBox[{"i", "=", "2"}], ",", 
+              RowBox[{"i", "\[LessEqual]", 
+               RowBox[{"len", "-", "1"}]}], ",", 
+              RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"Sow", "[", 
+                FractionBox[
+                 RowBox[{
+                  RowBox[{"points", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"i", "+", "1"}], ",", "2"}], "]"}], "]"}], "-", 
+                  RowBox[{"points", "[", 
+                   RowBox[{"[", 
+                    RowBox[{
+                    RowBox[{"i", "-", "1"}], ",", "2"}], "]"}], "]"}]}], 
+                 RowBox[{"2", "h"}]], "]"}], ";"}]}], "\[IndentingNewLine]", 
+             "]"}], ";"}], "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[CurlyEpsilon]\[Xi]\[Alpha]\[Gamma]\[Omega]\[Gamma]\:03ae", " ", 
+         "\[Tau]\[Eta]\[FinalSigma]", " ", 
+         "\[Tau]\[Iota]\[Mu]\:03ae\[FinalSigma]", " ", 
+         "\[Tau]\[Eta]\[FinalSigma]", " ", 
+         "\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Omicron]\
+\[Upsilon]", " ", "\[Sigma]\[Tau]\[Omicron]", " ", 
+         "\[Kappa]\:03ac\[Theta]\[CurlyEpsilon]", " ", 
+         "\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omicron]"}], " ", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"{", 
+         RowBox[{"dFirst", ",", "dMid", ",", "dLast"}], "}"}], "]"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalUpsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ae", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+    "\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Omicron]\[Upsilon]", 
+    " ", "\[Sigma]\[Tau]\[Omicron]", " ", 
+    "\[Kappa]\:03ac\[Theta]\[CurlyEpsilon]", " ", 
+    RowBox[{"\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Omicron]", "."}]}], 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dxs", "=", 
+    RowBox[{"dInterpolation", "[", "points", "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalChi]\[Rho]\[Eta]\[Sigma]\[Iota]\[Mu]\[Omicron]\[Pi]\[Omicron]\
+\[Iota]\[Omicron]\:03cd\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]", " ", 
+    "\[Gamma]\[Iota]\[Alpha]", " ", "\[Nu]\[Alpha]", " ", 
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Sigma]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Iota]\[FinalSigma]", 
+    " ", "\[Tau]\[Iota]\[Mu]\:03ad\[FinalSigma]", " ", 
+    "\[Tau]\[Eta]\[FinalSigma]", " ", 
+    "\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Omicron]\[Upsilon]", 
+    " ", "\[Sigma]\[Tau]\[Alpha]", " ", "\:03af\[Delta]\[Iota]\[Alpha]", " ", 
+    RowBox[{"\[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\[Alpha]", "."}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_", "]"}], ":=", 
+   RowBox[{"x", " ", 
+    SuperscriptBox["\[ExponentialE]", "x"]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dxsR", "=", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"f", "'"}], "[", "#", "]"}], "&"}], ",", "xs"}], "]"}]}], 
+   ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalUpsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Iota]\[FinalSigma]", 
+    " ", "\[Delta]\[Iota]\[Alpha]\[CurlyPhi]\[Omicron]\[Rho]\:03ad\
+\[FinalSigma]", " ", 
+    "\[Alpha]\[Nu]\:03ac\[Mu]\[CurlyEpsilon]\[Sigma]\[Alpha]", " ", 
+    "\[Sigma]\[Tau]\[Iota]\[FinalSigma]", " ", 
+    "\[Tau]\[Iota]\[Mu]\:03ad\[FinalSigma]", " ", "\[Pi]\[Omicron]\[Upsilon]",
+     " ", "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Sigma]\
+\[Alpha]\[Mu]\[CurlyEpsilon]", " ", "\[Kappa]\[Alpha]\[Iota]", " ", 
+    "\[Tau]\[Iota]\[FinalSigma]", " ", 
+    RowBox[{
+    "\[Pi]\[Rho]\[Alpha]\[Gamma]\[Mu]\[Alpha]\[Tau]\[Iota]\[Kappa]\:03ad\
+\[FinalSigma]", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"differences", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Abs", "[", 
+       RowBox[{
+        RowBox[{"dxs", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "-", 
+        RowBox[{"dxsR", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "]"}]}], "}"}]}], "]"}]}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"differences", "=", 
+    RowBox[{"Abs", "[", 
+     RowBox[{"dxs", "-", "dxsR"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalPi]\[Alpha]\[Rho]\[Omicron]\[Upsilon]\[Sigma]\[Iota]\:03ac\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Alpha]", " ", 
+    RowBox[{
+    "\[Alpha]\[Pi]\[Omicron]\[Tau]\[CurlyEpsilon]\[Lambda]\:03ad\[Sigma]\[Mu]\
+\[Alpha]\[Tau]\[Alpha]", "."}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"results", "=", 
+   RowBox[{"Transpose", "[", 
+    RowBox[{"{", 
+     RowBox[{"xs", ",", "ys", ",", "dxs", ",", "dxsR", ",", "differences"}], 
+     "}"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"TableForm", "[", 
+  RowBox[{"results", ",", "\[IndentingNewLine]", 
+   RowBox[{"TableHeadings", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<x\>\"", ",", "\"\<f(x)\>\"", ",", "\"\<f'(x) [numerical]\>\"", 
+        ",", "\"\<f'(x) [function]\>\"", ",", "\"\<difference\>\""}], "}"}]}],
+      "}"}]}], ",", "\[IndentingNewLine]", 
+   RowBox[{"TableAlignments", "\[Rule]", "Center"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.659726625001794*^9, 3.6597268036336975`*^9}, {
+   3.659726854227265*^9, 3.659727236635458*^9}, {3.6597273003964605`*^9, 
+   3.6597273059152503`*^9}, {3.6597274003442726`*^9, 3.6597275495481997`*^9}, 
+   3.659727711326965*^9, {3.661628084077477*^9, 3.6616280914566617`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {
+      StyleBox["\[Null]",
+       ShowStringCharacters->False], 
+      TagBox["\<\"x\"\>",
+       HoldForm], 
+      TagBox["\<\"f(x)\"\>",
+       HoldForm], 
+      TagBox["\<\"f'(x) [numerical]\"\>",
+       HoldForm], 
+      TagBox["\<\"f'(x) [function]\"\>",
+       HoldForm], 
+      TagBox["\<\"difference\"\>",
+       HoldForm]},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], "1.8`", "10.889365`", 
+      "16.832944999999974`", "16.93901290035625`", "0.10606790035627611`"},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], "1.9000000000000001`", 
+      "12.703199`", "19.443734999999986`", "19.389093882609885`", 
+      "0.05464111739010136`"},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], "2.`", "14.778112`", 
+      "22.22878999999998`", "22.16716829679195`", "0.06162170320802929`"},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], "2.1`", "17.148957`", 
+      "25.384589999999974`", "25.315126728959715`", "0.0694632710402594`"},
+     {
+      TagBox[
+       StyleBox["\<\"\[Null]\"\>",
+        ShowStringCharacters->False],
+       StyleForm[#, ShowStringCharacters -> False]& ], "2.2`", "19.85503`", 
+      "28.73686999999998`", "28.880043198189192`", "0.14317319818921348`"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Center}}, 
+      "RowsIndexed" -> {}},
+    GridBoxDividers->{
+     "Columns" -> {False, True, {False}, False}, "ColumnsIndexed" -> {}, 
+      "Rows" -> {False, True, {False}, False}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[2.0999999999999996`]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   {OutputFormsDump`HeadedRows, OutputFormsDump`HeadedColumns}],
+  Function[BoxForm`e$, 
+   TableForm[
+   BoxForm`e$, 
+    TableHeadings -> {{}, {
+      "x", "f(x)", "f'(x) [numerical]", "f'(x) [function]", "difference"}}, 
+    TableAlignments -> Center]]]], "Output",
+ CellChangeTimes->{{3.6597271243008614`*^9, 3.6597271767436066`*^9}, {
+   3.6597272237780724`*^9, 3.6597272398988476`*^9}, 3.6597273610465918`*^9, {
+   3.659727515402409*^9, 3.6597275500907297`*^9}, {3.6597277128544173`*^9, 
+   3.6597277161198297`*^9}, 3.661628099033362*^9}]
+}, Open  ]],
+
+Cell["\<\
+\[CapitalBeta]\[Lambda]\:03ad\[Pi]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon] \
+\:03cc\[Tau]\[Iota] \[Eta] \[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\[Eta]\[Tau]\
+\[Iota]\[Kappa]\:03ae \
+\[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\[Gamma]\[Iota]\[Sigma]\[Eta] \[Pi]\
+\[Lambda]\[Eta]\[Sigma]\[Iota]\:03ac\[Zeta]\[CurlyEpsilon]\[Iota] \[Alpha]\
+\[Rho]\[Kappa]\[CurlyEpsilon]\[Tau]\:03ac \[Tau]\[Eta]\[Nu] \[Pi]\[Rho]\
+\[Alpha]\[Gamma]\[Mu]\[Alpha]\[Tau]\[Iota]\[Kappa]\:03ae \[Tau]\[Iota]\[Mu]\
+\:03ae \[Tau]\[Eta]\[FinalSigma] \[Pi]\[Alpha]\[Rho]\[Alpha]\[Gamma]\:03ce\
+\[Gamma]\[Omicron]\[Upsilon] \[Sigma]\[Tau]\[Alpha] \[Pi]\[Alpha]\[Rho]\
+\[Alpha]\[Pi]\:03ac\[Nu]\[Omega] \[Sigma]\[Eta]\[Mu]\[CurlyEpsilon]\:03af\
+\[Alpha], \[Alpha]\[Kappa]\:03cc\[Mu]\[Alpha] \[Kappa]\[Alpha]\[Iota] \
+\[Gamma]\[Iota]\[Alpha] \[Beta]\:03ae\[Mu]\[Alpha] 0.1 \[Mu]\[CurlyEpsilon]\
+\[Tau]\[Alpha]\[Xi]\:03cd \[Tau]\[Omega]\[Nu] \[Sigma]\[Eta]\[Mu]\
+\[CurlyEpsilon]\:03af\[Omega]\[Nu].
+\[CapitalPhi]\[Alpha]\:03af\[Nu]\[CurlyEpsilon]\[Tau]\[Alpha]\[Iota] \
+\[CurlyEpsilon]\[Pi]\:03af\[Sigma]\[Eta]\[FinalSigma] \:03cc\[Tau]\[Iota] \
+\[Eta] \[Mu]\:03ad\[Theta]\[Omicron]\[Delta]\[Omicron]\[FinalSigma] \[Tau]\
+\[Omega]\[Nu] \[Kappa]\[CurlyEpsilon]\[Nu]\[Tau]\[Rho]\[Iota]\[Kappa]\:03ce\
+\[Nu] \[Delta]\[Iota]\[Alpha]\[CurlyPhi]\[Omicron]\[Rho]\:03ce\[Nu] \[Delta]\
+\:03af\[Nu]\[CurlyEpsilon]\[Iota] \[Mu]\[Iota]\[Kappa]\[Rho]\:03cc\[Tau]\
+\[CurlyEpsilon]\[Rho]\[Omicron] \[Sigma]\[CurlyPhi]\:03ac\[Lambda]\[Mu]\
+\[Alpha] \[Alpha]\[Pi]\:03cc \[Alpha]\[Upsilon]\[Tau]\:03cc \[Pi]\[Omicron]\
+\[Upsilon] \[Pi]\[Alpha]\[Rho]\[Alpha]\[Tau]\[Eta]\[Rho]\[CurlyEpsilon]\:03af\
+\[Tau]\[Alpha]\[Iota] \[Sigma]\[Tau]\[Iota]\[FinalSigma] \[Alpha]\[Kappa]\
+\[Rho]\[Iota]\[Alpha]\[Nu]\:03ad\[FinalSigma] \[Tau]\[Iota]\[Mu]\:03ad\
+\[FinalSigma] \:03cc\[Pi]\[Omicron]\[Upsilon] \[Chi]\[Rho]\[Eta]\[Sigma]\
+\[Iota]\[Mu]\[Omicron]\[Pi]\[Omicron]\[Iota]\[Omicron]\:03cd\[Mu]\
+\[CurlyEpsilon] \[Tau]\[Omicron] \
+\[Pi]\[Omicron]\[Lambda]\[Upsilon]\:03ce\[Nu]\[Upsilon]\[Mu]\[Omicron] \
+Newton-Gregory \[Pi]\[Rho]\[Omicron]\[FinalSigma] \[Tau]\[Alpha] \[Mu]\[Pi]\
+\[Rho]\[Omicron]\[FinalSigma] \[Kappa]\[Alpha]\[Iota] \[Pi]\[Rho]\[Omicron]\
+\[FinalSigma] \[Tau]\[Alpha] \[Pi]\:03af\[Sigma]\[Omega] \[Alpha]\[Nu]\[Tau]\
+\:03af\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[Alpha].\
+\>", "Text",
+ CellChangeTimes->{{3.6597275764516525`*^9, 3.6597277310505333`*^9}, {
+  3.661628115428406*^9, 3.6616281447272797`*^9}}],
+
+Cell["", "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:0386\[Sigma]\[Kappa]\[Eta]\[Sigma]\[Eta] 3", "ChapterNC",
+ CellChangeTimes->{{3.658077457348184*^9, 3.658077461726974*^9}, 
+   3.65807751300914*^9}],
+
+Cell["Use the power method to determine the largest eigenvalue of", "Text",
+ CellChangeTimes->{{3.65972650931133*^9, 3.6597265207860537`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  FormBox[GridBox[{
+     {"4", "1", "2", "1"},
+     {"1", "7", "1", "0"},
+     {"2", "1", "4", "1"},
+     {"1", "0", "1", "3"}
+    }],
+   TraditionalForm], "]"}]], "Input",
+ CellChangeTimes->{{3.659726570308874*^9, 3.65972657868334*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"4", "1", "2", "1"},
+     {"1", "7", "1", "0"},
+     {"2", "1", "4", "1"},
+     {"1", "0", "1", "3"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.659726581668146*^9}]
+}, {2}]],
+
+Cell["What is the corresponding eigenvector?", "Text",
+ CellChangeTimes->{{3.6597265910205264`*^9, 3.659726599612589*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\[CapitalLambda]\:03cd\[Sigma]\[Eta]", "Titlos",
+ CellChangeTimes->{{3.6597248865509367`*^9, 3.659724898699006*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    RowBox[{"\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", "."}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"A", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"4", ",", "1", ",", "2", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "7", ",", "1", ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "1", ",", "4", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "0", ",", "1", ",", "3"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", 
+    "\[Beta]\[Omicron]\[Eta]\[Theta]\[Eta]\[Tau]\[Iota]\[Kappa]\:03ad\
+\[FinalSigma]", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\:03ae\[Sigma]\[CurlyEpsilon]\
+\[FinalSigma]", " ", "\[Gamma]\[Iota]\[Alpha]", " ", "\[Tau]\[Omicron]\[Nu]", 
+    " ", "\[Pi]\[Omicron]\[Lambda]\[Lambda]\[Alpha]\[Pi]\[Lambda]\[Alpha]\
+\[Sigma]\[Iota]\[Alpha]\[Sigma]\[Mu]\:03cc", " ", 
+    "\[Pi]\[Iota]\[Nu]\:03ac\[Kappa]\[Omega]\[Nu]", " ", 
+    "\[Kappa]\[Alpha]\[Iota]", " ", "\[Gamma]\[Iota]\[Alpha]", " ", 
+    "\[Tau]\[Eta]", " ", "\[Delta]\:03cd\[Nu]\[Alpha]\[Mu]\[Eta]", " ", 
+    RowBox[{"\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", "."}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"A_", "\[CircleDot]", "B_"}], "/;", 
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"Dimensions", "[", "B", "]"}], "]"}], ">", "1"}]}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{"\[CapitalOmicron]", " ", 
+      RowBox[{
+      "\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\[Sigma]\[Tau]\:03ae\
+\[FinalSigma]", " ", "\[CircleDot]", " ", 
+       "\[Omicron]\[Rho]\:03af\[Zeta]\[CurlyEpsilon]\[Iota]"}], " ", 
+      "\[Tau]\[Omicron]\[Nu]", " ", 
+      "\[Pi]\[Omicron]\[Lambda]\[Lambda]\[Alpha]\[Pi]\[Lambda]\[Alpha]\[Sigma]\
+\[Iota]\[Alpha]\[Sigma]\[Mu]\:03cc", " ", "\[Delta]\:03cd\[Omicron]", " ", 
+      RowBox[{"\[Pi]\[Iota]\[Nu]\:03ac\[Kappa]\[Omega]\[Nu]", "."}]}], " ", 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"dimA", "=", 
+        RowBox[{"Dimensions", "[", "A", "]"}]}], ",", 
+       RowBox[{"dimB", "=", 
+        RowBox[{"Dimensions", "[", "B", "]"}]}], ",", "result", ",", 
+       "\[IndentingNewLine]", "row", ",", "col"}], "\[IndentingNewLine]", 
+      "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "\:03ad\[Lambda]\[CurlyEpsilon]\[Gamma]\[Chi]\[Omicron]\[FinalSigma]", 
+        " ", "\[Gamma]\[Iota]\[Alpha]", " ", "\[Tau]\[Omicron]", " ", 
+        "\[Alpha]\[Nu]", " ", "\[Omicron]\[Iota]", " ", 
+        "\[Sigma]\[Tau]\:03ae\[Lambda]\[CurlyEpsilon]\[FinalSigma]", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]", " ", "1", "\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota]", " ", 
+        "\:03af\[Sigma]\[CurlyEpsilon]\[FinalSigma]", " ", 
+        "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Iota]\[FinalSigma]", " ", 
+        "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ad\[FinalSigma]", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]", " ", "2", "\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]"}], ",", " ", 
+       RowBox[{
+       "\:03ad\[Tau]\[Sigma]\[Iota]", " ", 
+        "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]", " ", "\[Nu]\[Alpha]", " ", 
+        "\[Mu]\[Pi]\[Omicron]\[Rho]\[CurlyEpsilon]\:03af", " ", 
+        "\[Nu]\[Alpha]", " ", "\[Gamma]\:03af\[Nu]\[CurlyEpsilon]\[Iota]", 
+        " ", 
+        "\[Pi]\[Omicron]\[Lambda]\[Lambda]\[Alpha]\[Pi]\[Lambda]\[Alpha]\
+\[Sigma]\[Iota]\[Alpha]\[Sigma]\[Mu]\:03cc\[FinalSigma]"}]}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dimA", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "\[NotEqual]", 
+         RowBox[{"dimB", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{
+        "Return", "[", 
+         "\"\<error: Not matching dimensions for multiplication.\>\"", 
+         "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "\[Kappa]\[Alpha]\[Tau]\[Alpha]\[Sigma]\[Kappa]\[CurlyEpsilon]\
+\[Upsilon]\:03ac\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+        "\[Kappa]\[CurlyEpsilon]\[Nu]\:03cc", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Iota]\[FinalSigma]", " ", 
+        "\[Alpha]\[Pi]\[Alpha]\[Iota]\[Tau]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]\[Nu]\[CurlyEpsilon]\[FinalSigma]", " ", 
+        "\[Delta]\[Iota]\[Alpha]\[Sigma]\[Tau]\:03ac\[Sigma]\[CurlyEpsilon]\
+\[Iota]\[FinalSigma]"}], " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"result", "=", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"Null", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"dimA", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", 
+           RowBox[{"dimB", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Alpha]", " ", 
+        "\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[CurlyEpsilon]\:03af\[Alpha]", 
+        " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+        "\[Gamma]\[Iota]\[Nu]\[Omicron]\[Mu]\:03ad\[Nu]\[Omicron]\[Upsilon]"}]\
+, " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"row", "=", "1"}], ",", 
+        RowBox[{"row", "\[LessEqual]", 
+         RowBox[{"dimA", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"row", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"For", "[", 
+          RowBox[{
+           RowBox[{"col", "=", "1"}], ",", 
+           RowBox[{"col", "\[LessEqual]", 
+            RowBox[{"dimB", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+           RowBox[{"col", "++"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"result", "[", 
+             RowBox[{"[", 
+              RowBox[{"row", ",", "col"}], "]"}], "]"}], "=", 
+            RowBox[{"Apply", "[", 
+             RowBox[{"Plus", ",", 
+              RowBox[{
+               RowBox[{"A", "[", 
+                RowBox[{"[", "row", "]"}], "]"}], 
+               RowBox[{"B", "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "col"}], "]"}], "]"}]}]}], "]"}]}]}], 
+          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
+       ";", "\[IndentingNewLine]", "result"}]}], "\[IndentingNewLine]", 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"A_", "\[CircleDot]", "B_"}], "/;", 
+    RowBox[{
+     RowBox[{"Length", "[", 
+      RowBox[{"Dimensions", "[", "B", "]"}], "]"}], "\[Equal]", "1"}]}], ":=", 
+   RowBox[{"Module", "[", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{"\[CapitalOmicron]", " ", 
+      RowBox[{
+      "\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\[Sigma]\[Tau]\:03ae\
+\[FinalSigma]", " ", "\[CircleDot]", " ", 
+       "\[Omicron]\[Rho]\:03af\[Zeta]\[CurlyEpsilon]\[Iota]"}], " ", 
+      "\[Tau]\[Omicron]\[Nu]", " ", 
+      "\[Pi]\[Omicron]\[Lambda]\[Lambda]\[Alpha]\[Pi]\[Lambda]\[Alpha]\[Sigma]\
+\[Iota]\[Alpha]\[Sigma]\[Mu]\:03cc", " ", 
+      "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+      "\[Kappa]\[Alpha]\[Iota]", " ", 
+      RowBox[{
+      "\[Delta]\[Iota]\[Alpha]\[Nu]\:03cd\[Sigma]\[Mu]\[Alpha]\[Tau]\[Omicron]\
+\[FinalSigma]", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"dimA", "=", 
+        RowBox[{"Dimensions", "[", "A", "]"}]}], ",", 
+       RowBox[{"dimB", "=", 
+        RowBox[{"Length", "[", "B", "]"}]}], ",", "result", ",", "row", ",", 
+       "col"}], "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "\:03ad\[Lambda]\[CurlyEpsilon]\[Gamma]\[Chi]\[Omicron]\[FinalSigma]", 
+        " ", "\[Gamma]\[Iota]\[Alpha]", " ", "\[Tau]\[Omicron]", " ", 
+        "\[Alpha]\[Nu]", " ", "\[Omicron]\[Iota]", " ", 
+        "\[Sigma]\[Tau]\:03ae\[Lambda]\[CurlyEpsilon]\[FinalSigma]", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]", " ", "1", "\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota]", " ", 
+        "\:03af\[Sigma]\[CurlyEpsilon]\[FinalSigma]", " ", 
+        "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Iota]\[FinalSigma]", " ", 
+        "\[Gamma]\[Rho]\[Alpha]\[Mu]\[Mu]\:03ad\[FinalSigma]", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]", " ", "2", "\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]"}], ",", " ", 
+       RowBox[{
+       "\:03ad\[Tau]\[Sigma]\[Iota]", " ", 
+        "\:03ce\[Sigma]\[Tau]\[CurlyEpsilon]", " ", "\[Nu]\[Alpha]", " ", 
+        "\[Mu]\[Pi]\[Omicron]\[Rho]\[CurlyEpsilon]\:03af", " ", 
+        "\[Nu]\[Alpha]", " ", "\[Gamma]\:03af\[Nu]\[CurlyEpsilon]\[Iota]", 
+        " ", "\[Pi]\[Omicron]\[Lambda]\[Lambda]\[Alpha]\[Pi]\[Lambda]\[Alpha]\
+\[Sigma]\[Iota]\[Alpha]\[Sigma]\[Mu]\:03cc\[FinalSigma]"}]}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"dimA", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "\[NotEqual]", "dimB"}], ",", 
+        RowBox[{
+        "Return", "[", 
+         "\"\<error: Not matching dimensions for multiplication.\>\"", 
+         "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "\[Kappa]\[Alpha]\[Tau]\[Alpha]\[Sigma]\[Kappa]\[CurlyEpsilon]\
+\[Upsilon]\:03ac\[Zeta]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+        "\[Kappa]\[CurlyEpsilon]\[Nu]\:03cc", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+        "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Iota]\[FinalSigma]", " ", 
+        "\[Alpha]\[Pi]\[Alpha]\[Iota]\[Tau]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]\[Nu]\[CurlyEpsilon]\[FinalSigma]", " ", 
+        "\[Delta]\[Iota]\[Alpha]\[Sigma]\[Tau]\:03ac\[Sigma]\[CurlyEpsilon]\
+\[Iota]\[FinalSigma]"}], " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"result", "=", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"Null", ",", 
+         RowBox[{"{", "dimB", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\:03af\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Alpha]", " ", 
+        "\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[CurlyEpsilon]\:03af\[Alpha]", 
+        " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+        "\[Gamma]\[Iota]\[Nu]\[Omicron]\[Mu]\:03ad\[Nu]\[Omicron]\[Upsilon]"}]\
+, " ", "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"row", "=", "1"}], ",", 
+        RowBox[{"row", "\[LessEqual]", 
+         RowBox[{"dimA", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{"row", "++"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"result", "[", 
+          RowBox[{"[", "row", "]"}], "]"}], "=", 
+         RowBox[{"Apply", "[", 
+          RowBox[{"Plus", ",", 
+           RowBox[{
+            RowBox[{"A", "[", 
+             RowBox[{"[", "row", "]"}], "]"}], "B"}]}], "]"}]}]}], 
+       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", "result"}]}],
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"A_List", "\[CircleTimes]", "x_Integer"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"\[CapitalOmicron]", " ", 
+       RowBox[{
+       "\[Tau]\[CurlyEpsilon]\[Lambda]\[CurlyEpsilon]\[Sigma]\[Tau]\:03ae\
+\[FinalSigma]", " ", "\[CircleTimes]", " ", 
+        "\[Upsilon]\[Psi]\:03ce\[Nu]\[CurlyEpsilon]\[Iota]"}], " ", 
+       "\:03ad\[Nu]\[Alpha]\[Nu]", " ", 
+       "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+       "\[Sigma]\[CurlyEpsilon]", " ", 
+       "\[Kappa]\:03ac\[Pi]\[Omicron]\[Iota]\[Alpha]", " ", 
+       "\[Alpha]\[Kappa]\:03ad\[Rho]\[Alpha]\[Iota]\[Eta]", " ", 
+       "\[Theta]\[CurlyEpsilon]\[Tau]\[Iota]\[Kappa]\:03ae", " ", 
+       RowBox[{"\[Delta]\:03cd\[Nu]\[Alpha]\[Mu]\[Eta]", "."}]}], " ", "*)"}],
+      "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"result", ",", 
+        RowBox[{"i", "=", "x"}]}], "\[IndentingNewLine]", "}"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"result", "[", "i", "]"}], "=", "A"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{"i", ">", "1"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"result", "[", 
+            RowBox[{"i", "-", "1"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"result", "[", "i", "]"}], "\[CircleDot]", "A"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"i", "--"}]}]}], "\[IndentingNewLine]", "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"result", "[", "1", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+   ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", 
+    "\[Beta]\[Omicron]\[Eta]\[Theta]\[Eta]\[Tau]\[Iota]\[Kappa]\:03ae", " ", 
+    "\[Sigma]\[Upsilon]\[Nu]\:03ac\[Rho]\[Tau]\[Eta]\[Sigma]\[Eta]", " ", 
+    "\[Gamma]\[Iota]\[Alpha]", " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\:03cc", " ", "\[Tau]\[Eta]\[FinalSigma]", " ", 
+    "\[Mu]\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\
+\[Rho]\[Eta]\[FinalSigma]", " ", 
+    "\[Iota]\[Delta]\[Iota]\[Omicron]\[Tau]\[Iota]\[Mu]\[Eta]\[FinalSigma]", 
+    " ", "\[Kappa]\[Alpha]\[Iota]", " ", "\[Tau]\[Omicron]\[Upsilon]", " ", 
+    "\[Alpha]\[Nu]\[Tau]\[Iota]\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\[Omicron]\
+\[Upsilon]", " ", 
+    "\[Iota]\[Delta]\[Iota]\[Omicron]\[Delta]\[Iota]\[Alpha]\[Nu]\:03cd\
+\[Sigma]\[Mu]\[Alpha]\[Tau]\[Omicron]\[FinalSigma]", " ", 
+    "\[CurlyEpsilon]\[Nu]\:03cc\[FinalSigma]", " ", 
+    RowBox[{"\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]", "."}]}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"EigenvalueEigenvectorPowerMethod", "[", 
+     RowBox[{"table_", ",", 
+      RowBox[{"akribeia_Integer:", "16"}]}], "]"}], ":=", 
+    RowBox[{"Module", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{
+       "\[CapitalEta]", " ", "EigenvalueEigenvectorPowerMethod", " ", 
+        "\[Pi]\[Alpha]\:03af\[Rho]\[Nu]\[CurlyEpsilon]\[Iota]", " ", 
+        "\:03ad\[Nu]\[Alpha]", " ", 
+        "\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]"}], ",", " ", 
+       RowBox[{
+       "\[Kappa]\[Alpha]\[Iota]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Alpha]\[Kappa]\[Rho]\:03af\[Beta]\[CurlyEpsilon]\[Iota]\[Alpha]", 
+        " ", "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        "\[Zeta]\[Eta]\[Tau]\[Alpha]\[Mu]\[CurlyEpsilon]", " ", 
+        "\[Pi]\[Rho]\[Omicron]\[Alpha]\[Iota]\[Rho]\[CurlyEpsilon]\[Tau]\
+\[Iota]\[Kappa]\:03ac", " ", "\[Sigma]\[Alpha]\[Nu]", " ", 
+        RowBox[{
+        "\[Omicron]\[Rho]\:03af\[Sigma]\[Mu]\[Alpha]\[Tau]\[Alpha]", ".", 
+         "\[IndentingNewLine]", 
+         "\[CapitalDelta]\:03af\[Nu]\[CurlyEpsilon]\[Iota]"}], " ", 
+        "\[Sigma]\[Alpha]\[Nu]", " ", 
+        "\[Alpha]\[Pi]\[Omicron]\[Tau]\:03ad\[Lambda]\[CurlyEpsilon]\[Sigma]\
+\[Mu]\[Alpha]", " ", "\[Mu]\[Iota]\[Alpha]", " ", 
+        "\[Lambda]\:03af\[Sigma]\[Tau]\[Alpha]", " ", 
+        "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        "\[Pi]\[CurlyEpsilon]\[Rho]\[Iota]\:03ad\[Chi]\[CurlyEpsilon]\[Iota]",
+         " ", "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]", " ", 
+        RowBox[{
+        "\[Sigma]\[CurlyEpsilon]\[Iota]\[Rho]\:03ac", ":", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"(", "1", ")"}], " ", "\[Tau]\[Eta]\[Nu]", " ", 
+          "\[Mu]\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\
+\[CurlyEpsilon]\[Rho]\[Eta]", " ", 
+          "\[Iota]\[Delta]\[Iota]\[Omicron]\[Tau]\[Iota]\[Mu]\:03ae", " ", 
+          "\[Tau]\[Omicron]\[Upsilon]", " ", 
+          "\[Pi]\[Iota]\[Nu]\[Alpha]\[Kappa]\[Alpha]", " ", 
+          "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\
+\[Mu]\:03ad\[Nu]\[Eta]", " ", "\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Eta]", 
+          " ", "\[Mu]\:03ad\[Theta]\[Omicron]\[Delta]\[Omicron]", " ", 
+          "\[Tau]\[Omega]\[Nu]", " ", 
+          "\[Delta]\[Upsilon]\[Nu]\:03ac\[Mu]\[CurlyEpsilon]\[Omega]\[Nu]"}]}]\
+}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"(", "2", ")"}], " ", "\[Tau]\[Omicron]", " ", 
+        "\[Alpha]\[Nu]\[Tau]\:03af\[Sigma]\[Tau]\[Omicron]\[Iota]\[Chi]\
+\[Omicron]", " ", 
+        "\[Iota]\[Delta]\[Iota]\[Omicron]\[Delta]\[Iota]\:03ac\[Nu]\[Upsilon]\
+\[Sigma]\[Mu]\[Alpha]"}], ",", " ", 
+       RowBox[{
+       "\[Kappa]\[Alpha]\[Nu]\[Omicron]\[Nu]\[Iota]\[Kappa]\[Omicron]\[Pi]\
+\[Omicron]\[Iota]\[Eta]\[Mu]\:03ad\[Nu]\[Omicron]", " ", 
+        "\[Sigma]\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Mu]\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\
+\[CurlyEpsilon]\[Rho]\[Eta]", " ", 
+        "\[Delta]\[Iota]\:03ac\[Sigma]\[Tau]\[Alpha]\[Sigma]\:03ae", " ", 
+        "\[Tau]\[Omicron]\[Upsilon]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"(", "3", ")"}], " ", "\[Tau]\[Omicron]", " ", 
+        "\[Tau]\[Upsilon]\[Chi]\[Alpha]\:03af\[Omicron]", " ", 
+        "\[Delta]\[Iota]\:03ac\[Nu]\[Upsilon]\[Sigma]\[Mu]\[Alpha]", " ", 
+        "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        "\[Chi]\[Rho]\[Eta]\[Sigma]\[Iota]\[Mu]\[Omicron]\[Pi]\[Omicron]\
+\[Iota]\:03ae\[Theta]\[Eta]\[Kappa]\[CurlyEpsilon]", " ", 
+        "\[Gamma]\[Iota]\[Alpha]", " ", "\[Tau]\[Eta]\[Nu]", " ", 
+        "\[Mu]\:03ad\[Theta]\[Omicron]\[Delta]\[Omicron]", " ", 
+        "\[Tau]\[Omega]\[Nu]", " ", 
+        "\[Delta]\[Upsilon]\[Nu]\:03ac\[Mu]\[CurlyEpsilon]\[Omega]\[Nu]"}], 
+       ",", " ", 
+       RowBox[{"\[Kappa]\[Alpha]\[Iota]", "\[IndentingNewLine]", 
+        RowBox[{"(", "4", ")"}], " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+        "\[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\:03cc", " ", 
+        "\[Tau]\[Omega]\[Nu]", " ", 
+        "\[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\[Alpha]\[Lambda]\:03ae\[Psi]\
+\[CurlyEpsilon]\[Omega]\[Nu]", " ", "\[Pi]\[Omicron]\[Upsilon]", " ", 
+        RowBox[{
+        "\[Chi]\[Rho]\[CurlyEpsilon]\[Iota]\:03ac\[Sigma]\[Tau]\[Eta]\[Kappa]\
+\[Alpha]\[Nu]", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{"x", ",", 
+        RowBox[{"len", "=", 
+         RowBox[{"Length", "[", "table", "]"}]}], ",", "ev", ",", "normev", 
+        ",", "i"}], "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+       "\[CapitalOmicron]\[Rho]\:03af\[Zeta]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Tau]\[Upsilon]\[Chi]\[Alpha]\:03af\[Omicron]", " ", 
+        "\[Delta]\[Iota]\:03ac\[Nu]\[Upsilon]\[Sigma]\[Mu]\[Alpha]"}], " ", 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "[", "0", "]"}], "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "5"}], "}"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "len"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", "True", ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "[", "i", "]"}], "=", 
+           RowBox[{"N", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"table", "\[CircleTimes]", 
+                RowBox[{"(", 
+                 RowBox[{"i", "+", "1"}], ")"}]}], ")"}], "\[CircleDot]", 
+              RowBox[{"x", "[", "0", "]"}]}], 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"table", "\[CircleTimes]", 
+                RowBox[{"(", "i", ")"}]}], ")"}], "\[CircleDot]", 
+              RowBox[{"x", "[", "0", "]"}]}]], "]"}]}], 
+          RowBox[{"(*", 
+           RowBox[{"N", "[", 
+            FractionBox[
+             RowBox[{
+              RowBox[{"MatrixPower", "[", 
+               RowBox[{"table", ",", 
+                RowBox[{"i", "+", "1"}]}], "]"}], ".", 
+              RowBox[{"x", "[", "0", "]"}]}], 
+             RowBox[{
+              RowBox[{"MatrixPower", "[", 
+               RowBox[{"table", ",", "i"}], "]"}], ".", 
+              RowBox[{"x", "[", "0", "]"}]}]], "]"}], "*)"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "\[Delta]\[Iota]\[Alpha]\[Kappa]\:03cc\[Pi]\[Tau]\[Omicron]\
+\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\:03cc\[Tau]\[Alpha]\[Nu]", " ", 
+            "\:03ad\[Chi]\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", 
+            "\[Alpha]\[Rho]\[Kappa]\[CurlyEpsilon]\[Tau]\:03ac", " ", 
+            "\[Kappa]\[Alpha]\[Lambda]\:03ae", " ", 
+            "\[Sigma]\:03cd\[Gamma]\[Kappa]\[Lambda]\[Iota]\[Sigma]\[Eta]"}], 
+           " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"AllTrue", "[", 
+             RowBox[{
+              RowBox[{"Abs", "@", 
+               RowBox[{"Differences", "[", 
+                RowBox[{"x", "[", "i", "]"}], "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"#", "\[LessEqual]", 
+                SuperscriptBox["10", 
+                 RowBox[{"-", "akribeia"}]]}], "&"}]}], "]"}], 
+            "\[IndentingNewLine]", ",", 
+            RowBox[{"Break", "[", "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{
+           "\[Alpha]\[Nu]", " ", "\[Eta]", " ", 
+            "\[Delta]\[Iota]\[Alpha]\[Delta]\[Iota]\[Kappa]\[Alpha]\[Sigma]\
+\:03af\[Alpha]", " ", "\[Pi]\[Alpha]\:03af\[Rho]\[Nu]\[CurlyEpsilon]\[Iota]", 
+            " ", "\[Pi]\[Omicron]\[Lambda]\:03cd", " ", 
+            "\[Delta]\[Iota]\[Alpha]\[Kappa]\:03cc\[Pi]\[Tau]\[Omicron]\
+\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Gamma]\[Iota]\[Alpha]\[Tau]\:03af", 
+            " ", "\[Mu]\:03ac\[Lambda]\[Lambda]\[Omicron]\[Nu]", " ", 
+            "\[Delta]\[CurlyEpsilon]\[Nu]", " ", 
+            "\[Mu]\[Pi]\[Omicron]\[Rho]\[Omicron]\:03cd\[Mu]\[CurlyEpsilon]", 
+            " ", "\[Nu]\[Alpha]", " ", 
+            "\[CurlyPhi]\[Tau]\:03ac\[Sigma]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon]", " ", "\[Sigma]\[Tau]\[Eta]\[Nu]", " ", 
+            "\[CurlyEpsilon]\[Pi]\[Iota]\[Theta]\[Upsilon]\[Mu]\[Iota]\[Tau]\
+\:03ae", " ", 
+            "\[Alpha]\[Kappa]\[Rho]\:03af\[Beta]\[CurlyEpsilon]\[Iota]\[Alpha]\
+"}], " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"i", "\[Equal]", "200"}], ",", 
+            RowBox[{"Break", "[", "]"}]}], "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\
+\[Mu]\:03cc\[FinalSigma]", " ", "\[Kappa]\[Alpha]\[Iota]", " ", 
+         "\[Kappa]\[Alpha]\[Nu]\[Omicron]\[Nu]\[Iota]\[Kappa]\[Omicron]\[Pi]\
+\[Omicron]\:03af\[Eta]\[Sigma]\[Eta]", " ", "\[Tau]\[Omicron]\[Upsilon]", " ",
+          "\[Iota]\[Delta]\[Iota]\[Omicron]\[Delta]\[Iota]\[Alpha]\[Nu]\:03cd\
+\[Sigma]\[Mu]\[Alpha]\[Tau]\[Omicron]\[FinalSigma]"}], " ", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"ev", "=", 
+        RowBox[{
+         RowBox[{"MatrixPower", "[", 
+          RowBox[{"table", ",", "i"}], "]"}], ".", 
+         RowBox[{"x", "[", "0", "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"normev", "=", 
+        RowBox[{"N", "[", 
+         FractionBox["ev", 
+          RowBox[{"Max", "[", "ev", "]"}]], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "\[Tau]\[Alpha]", " ", 
+         "\[Alpha]\[Pi]\[Omicron]\[Tau]\[CurlyEpsilon]\[Lambda]\:03ad\[Sigma]\
+\[Mu]\[Alpha]\[Tau]\[Alpha]"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "[", "i", "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], ",", "normev", ",", 
+         RowBox[{"x", "[", "0", "]"}], ",", "i"}], "}"}]}]}], 
+     "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalEpsilon]\[Kappa]\[Tau]\[CurlyEpsilon]\[Lambda]\[Omicron]\:03cd\
+\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Omicron]\[Nu]", " ", 
+    RowBox[{
+    "\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\:03cc", "."}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"result", "=", 
+    RowBox[{"EigenvalueEigenvectorPowerMethod", "[", "A", "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "\[CapitalPi]\[Alpha]\[Rho]\[Omicron]\[Upsilon]\[Sigma]\[Iota]\:03ac\[Zeta]\
+\[Omicron]\[Upsilon]\[Mu]\[CurlyEpsilon]", " ", "\[Tau]\[Alpha]", " ", 
+    RowBox[{
+    "\[Alpha]\[Pi]\[Omicron]\[Tau]\[CurlyEpsilon]\[Lambda]\:03ad\[Sigma]\[Mu]\
+\[Alpha]\[Tau]\[Alpha]", "."}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Column", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"StringForm", "[", 
+      RowBox[{
+      "\"\<\[CapitalOmicron] \[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]\
+\[FinalSigma] \[CapitalAlpha] = ``\>\"", ",", "\[IndentingNewLine]", 
+       RowBox[{"MatrixForm", "@", "A"}]}], "]"}], "\[IndentingNewLine]", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+        "StringForm", "[", 
+         "\"\<\:03ad\[Chi]\[CurlyEpsilon]\[Iota] \[Mu]\[CurlyEpsilon]\[Gamma]\
+\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\[Rho]\[Eta] \[Iota]\[Delta]\
+\[Iota]\[Omicron]\[Tau]\[Iota]\[Mu]\:03ae \[Tau]\[Eta]\[Nu]\>\"", "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\< \!\(\*SubscriptBox[\(\[Lambda]\), \(1\)]\) = ``.\\n\>\"", 
+            ",", 
+            RowBox[{"FullForm", "[", 
+             RowBox[{"result", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Bold", ",", "13"}], "}"}]}], "]"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}], "\[IndentingNewLine]", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+        "StringForm", "[", 
+         "\"\<\[CapitalTau]\[Omicron] \[Alpha]\[Nu]\[Tau]\:03af\[Sigma]\[Tau]\
+\[Omicron]\[Iota]\[Chi]\[Omicron] \[Iota]\[Delta]\[Iota]\[Omicron]\[Delta]\
+\[Iota]\:03ac\[Nu]\[Upsilon]\[Sigma]\[Mu]\[Alpha] \[CurlyEpsilon]\:03af\[Nu]\
+\[Alpha]\[Iota] \[Tau]\[Omicron] \>\"", "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<x = ``\>\"", ",", 
+            RowBox[{"Map", "[", 
+             RowBox[{"FullForm", ",", 
+              RowBox[{"result", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Bold", ",", "13"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+        "StringForm", "[", 
+         "\"\<,\\n \[Tau]\[Omicron] \[Omicron]\[Pi]\[Omicron]\:03af\[Omicron] \
+\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \
+\[Kappa]\[Alpha]\[Nu]\[Omicron]\[Nu]\[Iota]\[Kappa]\[Omicron]\[Pi]\[Omicron]\
+\[Iota]\[Eta]\[Mu]\:03ad\[Nu]\[Omicron] \[Sigma]\[Tau]\[Eta]\[Nu] \[Mu]\
+\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\[Rho]\
+\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \[Tau]\[Omicron]\[Upsilon].\\n\>\"", "]"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}], "\[IndentingNewLine]", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Row", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+        "StringForm", "[", 
+         "\"\<\[CapitalEta] \[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\:03ac\[Lambda]\
+\[Eta]\[Psi]\[Eta] \:03ad\[Gamma]\[Iota]\[Nu]\[CurlyEpsilon] \>\"", "]"}], 
+        ",", "\[IndentingNewLine]", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<`` \[CurlyPhi]\[Omicron]\[Rho]\:03ad\[FinalSigma]\>\"", ",", 
+            RowBox[{"result", "[", 
+             RowBox[{"[", 
+              RowBox[{"-", "1"}], "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Bold", ",", "13"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+        "StringForm", "[", 
+         "\"\< \[Gamma]\[Iota]\[Alpha] \[Nu]\[Alpha] \[CurlyEpsilon]\[Pi]\
+\[Iota]\[Tau]\[CurlyEpsilon]\[Upsilon]\[Chi]\[Theta]\[CurlyEpsilon]\:03af \
+\[Eta] \[CurlyEpsilon]\[Pi]\[Iota]\[Theta]\[Upsilon]\[Mu]\[Iota]\[Tau]\:03ae \
+\[Alpha]\[Kappa]\[Rho]\:03af\[Beta]\[CurlyEpsilon]\[Iota]\[Alpha].\>\"", 
+         "]"}]}], "\[IndentingNewLine]", "}"}], "]"}]}], 
+    "\[IndentingNewLine]", "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Alignment", "\[Rule]", "Center"}]}], "\[IndentingNewLine]", 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6609339846756983`*^9, 3.6609341998788195`*^9}, {
+   3.660937436212264*^9, 3.6609374674271946`*^9}, {3.660937510205829*^9, 
+   3.6609375443471527`*^9}, 3.6609382078503056`*^9, {3.6609383157487364`*^9, 
+   3.6609383887159424`*^9}, {3.6609384341031837`*^9, 
+   3.6609386715361767`*^9}, {3.660939552992509*^9, 3.660939814157092*^9}, {
+   3.6609402847645926`*^9, 3.6609404399918036`*^9}, {3.6616238094004965`*^9, 
+   3.6616238098558483`*^9}, {3.661623858258222*^9, 3.661623861009346*^9}, {
+   3.661623956645541*^9, 3.661624039405567*^9}, {3.6616240903946943`*^9, 
+   3.661624166881423*^9}, {3.6616241982037425`*^9, 3.6616242383968196`*^9}, 
+   3.6616244856715155`*^9, {3.661624540161358*^9, 3.661624546243126*^9}, 
+   3.6616246536983767`*^9, {3.66162469964672*^9, 3.6616247499908423`*^9}, {
+   3.6616248460196304`*^9, 3.6616249571005573`*^9}, {3.6616249956188607`*^9, 
+   3.6616249974622364`*^9}, {3.6616250374267635`*^9, 3.6616250554405355`*^9}, 
+   3.6616250931475606`*^9, {3.661626200600684*^9, 3.661626228343858*^9}, 
+   3.6616275172159314`*^9, {3.6616275559828835`*^9, 3.6616275595697093`*^9}, {
+   3.6616277506595035`*^9, 3.6616277514157124`*^9}, 3.6617869313502083`*^9}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox["\<\"\[CapitalOmicron] \
+\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]\[FinalSigma] \[CapitalAlpha] = \
+\\!\\(\\*TagBox[\\((\[NoBreak] \\*GridBox[{{\\\"4\\\", \\\"1\\\", \\\"2\\\", \
+\\\"1\\\"}, {\\\"1\\\", \\\"7\\\", \\\"1\\\", \\\"0\\\"}, {\\\"2\\\", \\\"1\\\
+\", \\\"4\\\", \\\"1\\\"}, {\\\"1\\\", \\\"0\\\", \\\"1\\\", \\\"3\\\"}}, \
+RowSpacings -> 1, ColumnSpacings -> 1, RowAlignments -> Baseline, \
+ColumnAlignments -> Center] \[NoBreak])\\), Function[BoxForm`e$, \
+MatrixForm[BoxForm`e$]]]\\)\"\>",
+      StringForm[
+      "\[CapitalOmicron] \
+\[Pi]\:03af\[Nu]\[Alpha]\[Kappa]\[Alpha]\[FinalSigma] \[CapitalAlpha] = ``", 
+       MatrixForm[{{4, 1, 2, 1}, {1, 7, 1, 0}, {2, 1, 4, 1}, {1, 0, 1, 3}}]],
+      Editable->False]},
+    {
+     TemplateBox[{
+      InterpretationBox[
+       "\"\:03ad\[Chi]\[CurlyEpsilon]\[Iota] \[Mu]\[CurlyEpsilon]\[Gamma]\
+\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\[Rho]\[Eta] \[Iota]\[Delta]\
+\[Iota]\[Omicron]\[Tau]\[Iota]\[Mu]\:03ae \[Tau]\[Eta]\[Nu]\"", 
+        StringForm[
+        "\:03ad\[Chi]\[CurlyEpsilon]\[Iota] \[Mu]\[CurlyEpsilon]\[Gamma]\
+\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\[Rho]\[Eta] \[Iota]\[Delta]\
+\[Iota]\[Omicron]\[Tau]\[Iota]\[Mu]\:03ae \[Tau]\[Eta]\[Nu]"], Editable -> 
+        False],StyleBox[
+        InterpretationBox[
+        "\" \\!\\(\\*SubscriptBox[\\(\[Lambda]\\), \\(1\\)]\\) = \
+\\!\\(\\*StyleBox[\\\"8.141336115655363`\\\", Rule[ShowSpecialCharacters, \
+False], Rule[ShowStringCharacters, True], Rule[NumberMarks, True]]\\).\\n\"", 
+         StringForm[" \!\(\*SubscriptBox[\(\[Lambda]\), \(1\)]\) = ``.\n", 
+          FullForm[8.141336115655363]], Editable -> False], {Bold, 13}, 
+        StripOnInput -> False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{
+      InterpretationBox[
+       "\"\[CapitalTau]\[Omicron] \[Alpha]\[Nu]\[Tau]\:03af\[Sigma]\[Tau]\
+\[Omicron]\[Iota]\[Chi]\[Omicron] \[Iota]\[Delta]\[Iota]\[Omicron]\[Delta]\
+\[Iota]\:03ac\[Nu]\[Upsilon]\[Sigma]\[Mu]\[Alpha] \[CurlyEpsilon]\:03af\[Nu]\
+\[Alpha]\[Iota] \[Tau]\[Omicron] \"", 
+        StringForm[
+        "\[CapitalTau]\[Omicron] \[Alpha]\[Nu]\[Tau]\:03af\[Sigma]\[Tau]\
+\[Omicron]\[Iota]\[Chi]\[Omicron] \[Iota]\[Delta]\[Iota]\[Omicron]\[Delta]\
+\[Iota]\:03ac\[Nu]\[Upsilon]\[Sigma]\[Mu]\[Alpha] \[CurlyEpsilon]\:03af\[Nu]\
+\[Alpha]\[Iota] \[Tau]\[Omicron] "], Editable -> False],StyleBox[
+        InterpretationBox[
+        "\"x = \\!\\({\\*StyleBox[\\\"0.5706680578276823`\\\", \
+Rule[ShowSpecialCharacters, False], Rule[ShowStringCharacters, True], \
+Rule[NumberMarks, True]], \\*StyleBox[\\\"1.`\\\", \
+Rule[ShowSpecialCharacters, False], Rule[ShowStringCharacters, True], \
+Rule[NumberMarks, True]], \\*StyleBox[\\\"0.5706680578276823`\\\", \
+Rule[ShowSpecialCharacters, False], Rule[ShowStringCharacters, True], \
+Rule[NumberMarks, True]], \\*StyleBox[\\\"0.22199212227731957`\\\", \
+Rule[ShowSpecialCharacters, False], Rule[ShowStringCharacters, True], \
+Rule[NumberMarks, True]]}\\)\"", 
+         StringForm["x = ``", {
+           FullForm[0.5706680578276823], 
+           FullForm[1.], 
+           FullForm[0.5706680578276823], 
+           FullForm[0.22199212227731957`]}], Editable -> False], {Bold, 13}, 
+        StripOnInput -> False],InterpretationBox[
+       "\",\\n \[Tau]\[Omicron] \[Omicron]\[Pi]\[Omicron]\:03af\[Omicron] \
+\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \
+\[Kappa]\[Alpha]\[Nu]\[Omicron]\[Nu]\[Iota]\[Kappa]\[Omicron]\[Pi]\[Omicron]\
+\[Iota]\[Eta]\[Mu]\:03ad\[Nu]\[Omicron] \[Sigma]\[Tau]\[Eta]\[Nu] \[Mu]\
+\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\[Rho]\
+\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \[Tau]\[Omicron]\[Upsilon].\\n\"", 
+        StringForm[
+        ",\n \[Tau]\[Omicron] \[Omicron]\[Pi]\[Omicron]\:03af\[Omicron] \
+\[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \
+\[Kappa]\[Alpha]\[Nu]\[Omicron]\[Nu]\[Iota]\[Kappa]\[Omicron]\[Pi]\[Omicron]\
+\[Iota]\[Eta]\[Mu]\:03ad\[Nu]\[Omicron] \[Sigma]\[Tau]\[Eta]\[Nu] \[Mu]\
+\[CurlyEpsilon]\[Gamma]\[Alpha]\[Lambda]\:03cd\[Tau]\[CurlyEpsilon]\[Rho]\
+\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \[Tau]\[Omicron]\[Upsilon].\n"], Editable -> 
+        False]},
+      "RowDefault"]},
+    {
+     TemplateBox[{
+      InterpretationBox[
+       "\"\[CapitalEta] \
+\[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\:03ac\[Lambda]\[Eta]\[Psi]\[Eta] \:03ad\
+\[Gamma]\[Iota]\[Nu]\[CurlyEpsilon] \"", 
+        StringForm[
+        "\[CapitalEta] \[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\:03ac\[Lambda]\[Eta]\
+\[Psi]\[Eta] \:03ad\[Gamma]\[Iota]\[Nu]\[CurlyEpsilon] "], Editable -> False],
+       StyleBox[
+        InterpretationBox[
+        "\"\\!\\(85\\) \[CurlyPhi]\[Omicron]\[Rho]\:03ad\[FinalSigma]\"", 
+         StringForm["`` \[CurlyPhi]\[Omicron]\[Rho]\:03ad\[FinalSigma]", 85], 
+         Editable -> False], {Bold, 13}, StripOnInput -> False],
+       InterpretationBox[
+       "\" \[Gamma]\[Iota]\[Alpha] \[Nu]\[Alpha] \[CurlyEpsilon]\[Pi]\[Iota]\
+\[Tau]\[CurlyEpsilon]\[Upsilon]\[Chi]\[Theta]\[CurlyEpsilon]\:03af \[Eta] \
+\[CurlyEpsilon]\[Pi]\[Iota]\[Theta]\[Upsilon]\[Mu]\[Iota]\[Tau]\:03ae \
+\[Alpha]\[Kappa]\[Rho]\:03af\[Beta]\[CurlyEpsilon]\[Iota]\[Alpha].\"", 
+        StringForm[
+        " \[Gamma]\[Iota]\[Alpha] \[Nu]\[Alpha] \[CurlyEpsilon]\[Pi]\[Iota]\
+\[Tau]\[CurlyEpsilon]\[Upsilon]\[Chi]\[Theta]\[CurlyEpsilon]\:03af \[Eta] \
+\[CurlyEpsilon]\[Pi]\[Iota]\[Theta]\[Upsilon]\[Mu]\[Iota]\[Tau]\:03ae \
+\[Alpha]\[Kappa]\[Rho]\:03af\[Beta]\[CurlyEpsilon]\[Iota]\[Alpha]."], 
+        Editable -> False]},
+      "RowDefault"]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Center}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{
+  3.661624240211727*^9, 3.6616244882350235`*^9, 3.661624550514348*^9, 
+   3.6616246550776334`*^9, {3.661624727150609*^9, 3.6616247519887705`*^9}, 
+   3.6616248646439395`*^9, 3.661624898747731*^9, 3.661625002602542*^9, {
+   3.661625038640439*^9, 3.6616250573111115`*^9}, 3.6616259482100897`*^9, 
+   3.6616262291601477`*^9, {3.6616275476593866`*^9, 3.6616275626247373`*^9}, 
+   3.6616280325430574`*^9, 3.6617868883715878`*^9, 3.6617869378814273`*^9}]
+}, Open  ]],
+
+Cell["\<\
+\[CapitalEpsilon]\[Pi]\[CurlyEpsilon]\[Iota]\[Delta]\:03ae \[Chi]\[Rho]\[Eta]\
+\[Sigma]\[Iota]\[Mu]\[Omicron]\[Pi]\[Omicron]\[Iota]\[Omicron]\:03cd\[Mu]\
+\[CurlyEpsilon] \[Tau]\[Upsilon]\[Chi]\[Alpha]\:03af\[Omicron] \[Alpha]\[Rho]\
+\[Chi]\[Iota]\[Kappa]\:03cc \[Delta]\[Iota]\:03ac\[Nu]\[Upsilon]\[Sigma]\[Mu]\
+\[Alpha] \[Gamma]\[Iota]\[Alpha] \[Tau]\[Eta] \[Lambda]\:03cd\[Sigma]\[Eta], \
+\[CurlyEpsilon]\[Lambda]\:03ad\[Gamma]\[Chi]\[Omicron]\[Upsilon]\[Mu]\
+\[CurlyEpsilon] \[Sigma]\[Tau]\[Alpha]\[Tau]\[Iota]\[Sigma]\[Tau]\[Iota]\
+\[Kappa]\:03ac \[Gamma]\[Iota]\[Alpha] \[Nu]\[Alpha] \[Beta]\[Rho]\[Omicron]\
+\:03cd\[Mu]\[CurlyEpsilon] \[Tau]\[Eta]\[Nu] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\
+\[Iota]\[Mu]\:03ae \[Tau]\[Omicron]\[Upsilon] \[Alpha]\[Rho]\[Iota]\[Theta]\
+\[Mu]\[Omicron]\:03cd \[Tau]\[Omega]\[Nu] \[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\
+\[Alpha]\[Lambda]\:03ae\[Psi]\[CurlyEpsilon]\[Omega]\[Nu] \[Pi]\[Omicron]\
+\[Upsilon] \[Alpha]\[Pi]\[Alpha]\[Iota]\[Tau]\[Omicron]\:03cd\[Nu]\[Tau]\
+\[Alpha]\[Iota] \[Gamma]\[Iota]\[Alpha] \[Tau]\[Omicron]\[Nu] \[Upsilon]\[Pi]\
+\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\:03cc.\
+\>", "Text",
+ CellChangeTimes->{{3.6617868061161795`*^9, 3.6617868767533216`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"results", "=", 
+   RowBox[{"Table", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{"AbsoluteTiming", "[", 
+       RowBox[{"EigenvalueEigenvectorPowerMethod", "[", "A", "]"}], "]"}], 
+      "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", "100", "}"}]}], "\[IndentingNewLine]", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"moN", "=", 
+   RowBox[{"N", "@", 
+    RowBox[{"Mean", "[", 
+     RowBox[{"results", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", 
+        RowBox[{"-", "1"}]}], "]"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"moT", "=", 
+   RowBox[{"N", "@", 
+    RowBox[{"Mean", "[", 
+     RowBox[{"results", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\[CapitalEta] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \
+\[Tau]\[Omicron]\[Upsilon] \[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\[Omicron]\:03cd \
+\[Tau]\[Omega]\[Nu] \[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\[Alpha]\[Lambda]\:03ae\
+\[Psi]\[CurlyEpsilon]\[Omega]\[Nu] \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \
+``\>\"", ",", "moN"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"StringForm", "[", 
+  RowBox[{
+  "\"\<\[CapitalEta] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \
+\[Tau]\[Omicron]\[Upsilon] \[Chi]\[Rho]\:03cc\[Nu]\[Omicron]\[Upsilon] \
+\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\[Omicron]\:03cd \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] ``\>\"", ",", 
+   "moT"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6617867949002633`*^9, 3.661786803812865*^9}, {
+   3.6617869468058043`*^9, 3.6617869710552425`*^9}, 3.6617870069202404`*^9, {
+   3.6617870483440094`*^9, 3.661787079464394*^9}, {3.6617871155331664`*^9, 
+   3.6617871551127167`*^9}, {3.6617872101157866`*^9, 
+   3.6617874821322956`*^9}, {3.6617877814711866`*^9, 3.661787839981642*^9}, {
+   3.6617879095531607`*^9, 3.661787933157011*^9}}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\[CapitalEta] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\[Iota]\
+\[Mu]\:03ae \[Tau]\[Omicron]\[Upsilon] \[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\
+\[Omicron]\:03cd \[Tau]\[Omega]\[Nu] \
+\[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\[Alpha]\[Lambda]\:03ae\[Psi]\[CurlyEpsilon]\
+\[Omega]\[Nu] \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \\!\\(90.83`\\)\"\>",
+  StringForm[
+  "\[CapitalEta] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \[Tau]\
+\[Omicron]\[Upsilon] \[Alpha]\[Rho]\[Iota]\[Theta]\[Mu]\[Omicron]\:03cd \
+\[Tau]\[Omega]\[Nu] \[CurlyEpsilon]\[Pi]\[Alpha]\[Nu]\[Alpha]\[Lambda]\:03ae\
+\[Psi]\[CurlyEpsilon]\[Omega]\[Nu] \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \
+``", 90.83],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.661787713224536*^9, 3.6617878522531624`*^9, 
+  3.6617879224059772`*^9, 3.661788142482832*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"\[CapitalEta] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\[Iota]\
+\[Mu]\:03ae \[Tau]\[Omicron]\[Upsilon] \[Chi]\[Rho]\:03cc\[Nu]\[Omicron]\
+\[Upsilon] \
+\[Upsilon]\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\
+\[Omicron]\:03cd \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] \
+\\!\\(2.074340442257`\\)\"\>",
+  StringForm[
+  "\[CapitalEta] \[Mu]\:03ad\[Sigma]\[Eta] \[Tau]\[Iota]\[Mu]\:03ae \[Tau]\
+\[Omicron]\[Upsilon] \[Chi]\[Rho]\:03cc\[Nu]\[Omicron]\[Upsilon] \[Upsilon]\
+\[Pi]\[Omicron]\[Lambda]\[Omicron]\[Gamma]\[Iota]\[Sigma]\[Mu]\[Omicron]\:03cd\
+ \[CurlyEpsilon]\:03af\[Nu]\[Alpha]\[Iota] ``", 2.074340442257],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.661787713224536*^9, 3.6617878522531624`*^9, 
+  3.6617879224059772`*^9, 3.6617881424858313`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{850, 626},
+WindowMargins->{{82, Automatic}, {Automatic, 14}},
+PrintingCopies->1,
+PrintingPageRange->{32000, 32000},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{595.3199999999999, 841.92},
+"PrintCellBrackets"->False,
+"PrintMultipleHorizontalPages"->False,
+"PrintRegistrationMarks"->False,
+"PrintingMargins"->{{54, 54}, {72, 72}}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"MyBook.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 135, 1, 54, "ChapterNC"],
+Cell[718, 25, 109, 1, 25, "Text"],
+Cell[830, 28, 1153, 45, 88, "Equation"],
+Cell[1986, 75, 163, 3, 25, "Text"],
+Cell[CellGroupData[{
+Cell[2174, 82, 122, 1, 36, "Titlos"],
+Cell[CellGroupData[{
+Cell[2321, 87, 25045, 542, 1715, "Input"],
+Cell[27369, 631, 423, 12, 31, "Output"]
+}, Open  ]],
+Cell[27807, 646, 44, 1, 1, "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27900, 653, 131, 1, 54, "ChapterNC"],
+Cell[28034, 656, 319, 10, 19, "Text"],
+Cell[28356, 668, 674, 21, 128, "Equation"],
+Cell[29033, 691, 328, 8, 38, "Text"],
+Cell[CellGroupData[{
+Cell[29386, 703, 122, 1, 37, "Titlos"],
+Cell[CellGroupData[{
+Cell[29533, 708, 15319, 338, 1186, "Input"],
+Cell[44855, 1048, 2770, 71, 121, "Output"]
+}, Open  ]],
+Cell[47640, 1122, 2462, 36, 76, "Text"],
+Cell[50105, 1160, 44, 1, 1, "PageBreak",
+ PageBreakBelow->True]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[50198, 1167, 156, 2, 54, "ChapterNC"],
+Cell[50357, 1171, 142, 1, 19, "Text"],
+Cell[CellGroupData[{
+Cell[50524, 1176, 280, 9, 80, "Input"],
+Cell[50807, 1187, 701, 20, 84, "Output"]
+}, {2}]],
+Cell[51520, 1210, 122, 1, 19, "Text"],
+Cell[CellGroupData[{
+Cell[51667, 1215, 122, 1, 37, "Titlos"],
+Cell[CellGroupData[{
+Cell[51814, 1220, 31517, 668, 2363, "Input"],
+Cell[83334, 1890, 6155, 115, 213, "Output"]
+}, Open  ]],
+Cell[89504, 2008, 1233, 17, 38, "Text"],
+Cell[CellGroupData[{
+Cell[90762, 2029, 2047, 47, 172, "Input"],
+Cell[92812, 2078, 843, 14, 31, "Output"],
+Cell[93658, 2094, 805, 14, 31, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
