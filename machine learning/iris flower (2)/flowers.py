@@ -47,6 +47,22 @@ with open("seeds.tsv") as infile:
 #  print(checkNaN(set))
 
 
-### Construct a nearest neighbor model.
-p1 = data[0,:]
-p2 = data[3,:]
+### Chek the a nearest neighbor model calculating distance with all data columns.
+# num = data.shape[0]
+# correctCount = 0
+# for i in range(0, num):
+#   minimumIndex = 0
+#   distances = []
+#   for j in range(0, num):
+#     if (i != j):
+#       distances.append( distance(data[i,:], data[j,:]) ) # Calculate all distances.
+#   minimumIndex = distances.index( min(distances) )
+#   if (minimumIndex >= i):
+#     minimumIndex = minimumIndex + 1
+#   #print(i, " (" , LA[i] , ") at ", minimumIndex, " (", LA[minimumIndex], ")")
+#   if (LA[i] == LA[minimumIndex]):
+#     correctCount = correctCount + 1
+#
+# print(correctCount/num)
+# The result is 0.904761, meaning that flower type can be identified ~90% of the time by its closest neighbor.
+
