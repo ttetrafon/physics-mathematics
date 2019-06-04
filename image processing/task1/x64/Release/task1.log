@@ -1,0 +1,6 @@
+﻿  task1.cpp
+c:\users\nakis\desktop\archive\task1\task1\task1.cpp(188): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Generating code
+  All 205 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  task1.vcxproj -> C:\Users\Nakis\Desktop\archive\task1\x64\Release\task1.exe

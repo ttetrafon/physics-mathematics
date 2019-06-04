@@ -1,0 +1,4 @@
+﻿  pch.cpp
+  task1.cpp
+c:\users\nakis\desktop\archive\task1\task1\task1.cpp(188): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  task1.vcxproj -> C:\Users\Nakis\Desktop\archive\task1\x64\Debug\task1.exe

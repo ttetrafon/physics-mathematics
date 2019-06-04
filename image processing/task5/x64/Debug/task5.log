@@ -1,0 +1,5 @@
+﻿  task5.cpp
+c:\users\nakis\desktop\archive\task5\task5\task5.cpp(66): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\nakis\desktop\archive\task5\task5\task5.cpp(104): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\nakis\desktop\archive\task5\task5\task5.cpp(109): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  task5.vcxproj -> C:\Users\Nakis\Desktop\archive\task5\x64\Debug\task5.exe
